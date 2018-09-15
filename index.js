@@ -463,6 +463,264 @@ const ocean_imgdata = () => {
     return imgData;
 }
 
+const sat_adj_imgdata = () => {
+    let SAT_ADJ = 150;
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] -= SAT_ADJ
+        imgData.data[i + 1] -= SAT_ADJ
+        imgData.data[i + 2] -= SAT_ADJ
+    }
+    return imgData;
+}
+
+const specksredscale_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let randomNumber = getRandomNumber(0, 100);
+        if (randomNumber > 10 && randomNumber < 13) {
+            imgData.data[i] = 120
+            imgData.data[i + 1] = 120
+            imgData.data[i + 2] = 120
+        }
+        let avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+
+        imgData.data[i] = avg + 100
+        imgData.data[i + 1] = avg + 40
+        imgData.data[i + 2] = avg + 20
+    }
+    return imgData;
+}
+
+const noise_centre_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+            imgData.data[i] += getRandomNumber(0, 100);
+            imgData.data[i + 1] += 20
+            imgData.data[i + 2] += getRandomNumber(0, 255)
+
+    }
+                
+    return imgData;
+}
+
+const perfume_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] += 80
+        imgData.data[i + 1] += 40
+        imgData.data[i + 2] += 120
+    }
+    return imgData;
+}
+
+const serenity_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] += 10
+        imgData.data[i + 1] += 40
+        imgData.data[i + 2] += 90
+    }
+    return imgData;
+}
+
+const pink_aura_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] += 90
+        imgData.data[i + 1] += 10
+        imgData.data[i + 2] += 90
+    }
+    return imgData;
+}
+
+const haze_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] += 90
+        imgData.data[i + 1] += 90
+        imgData.data[i + 2] += 10
+    }
+    return imgData;
+}
+
+const mellow_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i + 2] = 120 - imgData.data[i + 2];
+    }
+    return imgData;
+}
+
+const green_specks_imgdata = () => {
+
+    var randomNumber;
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        randomNumber = getRandomNumber(0, 200);
+        let addition = 0;
+        if (randomNumber > 0 && randomNumber < 50) {
+            addition1 = 20;
+            addition2 = 30;
+        }
+        else if (randomNumber > 49 && randomNumber < 100) {
+            addition1 = 10;
+            addition2 = 90;
+        }
+
+        else {
+            addition1 = 30;
+            addition2 = 10;
+        }
+
+        imgData.data[i] += addition1;
+        imgData.data[i + 1] += addition2;
+        imgData.data[i + 2] += addition1;
+    }
+    return imgData;
+}
+
+const eclectic_imgdata = () => {
+
+    let randomNumber = 0;
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        randomNumber = getRandomNumber(0, 200);
+        let addition = 0;
+        if (randomNumber > 0 && randomNumber < 50) {
+            addition1 = 20;
+            addition2 = 30;
+        }
+        else if (randomNumber > 49 && randomNumber < 100) {
+            addition1 = 10;
+            addition2 = 90;
+        }
+
+        else {
+            addition1 = 30;
+            addition2 = 10;
+        }
+
+        if (imgData.data[i] + addition > 255) {
+            imgData.data[i] -= addition
+        }
+        else {
+            imgData.data[i] += addition
+        }
+
+        if (imgData.data[i + 1] + addition > 255) {
+            imgData.data[i + 1] -= addition2;
+        } else {
+            imgData.data[i] += addition2;
+        }
+    }
+    return imgData;
+}
+
+const matrix_imgdata = () => {
+    var randomNumber;
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        randomNumber = getRandomNumber(0, 200);
+        var addition;
+        if (randomNumber > 0 && randomNumber < 50) {
+            addition1 = 20;
+            addition2 = 30;
+        }
+        else if (randomNumber > 49 && randomNumber < 100) {
+            addition1 = 10;
+            addition2 = 90;
+        }
+
+        else {
+            addition1 = 30;
+            addition2 = 10;
+        }
+
+        if (imgData.data[i] - addition > 255) {
+            imgData.data[i] -= addition
+        }
+        else {
+            imgData.data[i] += addition
+        }
+
+        if (imgData.data[i + 1] + addition > 255) {
+            imgData.data[i + 1] -= addition2;
+        } else {
+            imgData.data[i + 1] += addition2;
+        }
+    }
+    return imgData;
+}
+
+const matrix2 = () => {
+    var randomNumber;
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        randomNumber = getRandomNumber(0, 200);
+        let addition = 0;
+        if (randomNumber > 0 && randomNumber < 50) {
+            addition1 = 20;
+            addition2 = 30;
+        }
+        else if (randomNumber > 49 && randomNumber < 100) {
+            addition1 = 10;
+            addition2 = 90;
+        }
+
+        else {
+            addition1 = 70;
+            addition2 = 10;
+        }
+
+        if (imgData.data[i] - addition > 255) {
+            imgData.data[i] -= addition
+        }
+        else {
+            imgData.data[i] += addition
+        }
+
+        if (imgData.data[i + 1] + addition > 255) {
+            imgData.data[i + 1] -= addition2;
+        } else {
+            imgData.data[i + 1] += addition2;
+        }
+    }
+    return imgData;
+}
+
+const cosmic_imgdata = () => {
+    let randomNumber = 0;
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        randomNumber = getRandomNumber(0, 200);
+        let addition = 0;
+        if (randomNumber > 0 && randomNumber < 50) {
+            addition1 = 0;
+            addition2 = 30;
+        }
+        else if (randomNumber > 49 && randomNumber < 100) {
+            addition1 = 100;
+            addition2 = 90;
+        }
+
+        else {
+            addition1 = 70;
+            addition2 = 10;
+        }
+
+        if (imgData.data[i] - addition > 255) {
+            imgData.data[i] -= addition
+        }
+        else {
+            imgData.data[i] += addition
+        }
+
+        if (imgData.data[i + 1] + addition > 255) {
+            imgData.data[i + 1] -= addition2;
+        } else {
+            imgData.data[i + 2] += addition2;
+        }
+    }
+    return imgData;
+}
+
 
 const imgToCanvas = (img) => {
     var canvas = document.createElement("canvas");
