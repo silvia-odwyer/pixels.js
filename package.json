@@ -1,0 +1,31 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "An image filtering library, containing over 70 image filters, supporting Node & the browser.",
+  "main": "dist/FilterMagic.js",
+  "scripts": {
+    "build:browser": "webpack",
+    "build:node": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "image filtering", 
+    "image pixel manipulation",
+    "image processing", 
+    "browser", 
+    "node"
+  ],
+  "author": "Silvia O'Dwyer",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^3.9.1",
+    "eslint-loader": "^1.6.1",
+    "lodash": "^4.16.6",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.12"
+  }
+}
