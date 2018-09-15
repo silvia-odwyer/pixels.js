@@ -30,6 +30,27 @@ function filterMagic() {
 
 }
 
+const offset = () => {
+    console.log("offset called")
+    for (let i = 0; i < imgData.data.length; i += 4) {
+        var offset = 5;
+        imgData.data[i] = imgData.data[i+4*offset *offset] == undefined ? 0 : imgData.data[i+4*offset];
+    }
+    return imgData;
+}
+
+const imgToCanvas = (img) => {
+    var canvas = document.createElement("canvas");
+    canvas.height = img.height;
+    canvas.width = img.width;
+    var context = canvas.getContext("2d");
+    var ptrn = context.createPattern(img,'no-repeat');
+    context.fillStyle = ptrn;
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    return [canvas, context];
+}
+
 
 
 export default filterMagic();
