@@ -721,6 +721,86 @@ const cosmic_imgdata = () => {
     return imgData;
 }
 
+const retroviolet_imgdata = () => {
+
+    let randomNumber = 0;
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        randomNumber = getRandomNumber(0, 200);
+
+        let addition1 = 0;
+        let addition2 = 0;
+        if (randomNumber > 0 && randomNumber < 50) {
+            addition1 = 20;
+            addition2 = 30;
+        }
+        else if (randomNumber > 49 && randomNumber < 100) {
+            addition1 = 20;
+            addition2 = 90;
+        }
+
+        else {
+            addition1 = 10;
+            addition2 = 50;
+        }
+
+        if (imgData.data[i] - addition1 > 255) {
+            imgData.data[i] -= addition1
+        }
+        else {
+            imgData.data[i] += addition1
+        }
+
+        if (imgData.data[i + 2] + addition2 > 255) {
+            imgData.data[i + 2] -= addition2;
+        } else {
+            imgData.data[i + 2] += addition2;
+        }
+    }
+    return imgData;
+}
+
+const vintage_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] += 120
+        imgData.data[i + 1] += 70
+        imgData.data[i + 2] += 13
+    }
+
+    return imgData;
+}
+
+const confetti_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+
+        let randomNumber = getRandomNumber(0, 200);
+
+        if (randomNumber > 0 && randomNumber < 10) {
+            imgData.data[i] = getRandomNumber(0, 255)
+            imgData.data[i + 1] = getRandomNumber(0, 255)
+            imgData.data[i + 2] = getRandomNumber(0, 255)
+        }
+
+        else {
+            imgData.data[i] += 10
+            imgData.data[i + 1] += 20
+            imgData.data[i + 2] += 90
+        }
+
+    }
+    return imgData;
+}
+
+const horizon_imgdata = () => {
+    let SAT_ADJ = 150;
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] -= SAT_ADJ
+        imgData.data[i + 1] -= SAT_ADJ
+        imgData.data[i + 2] -= SAT_ADJ
+    }
+    return imgData;
+}
+
 
 const imgToCanvas = (img) => {
     var canvas = document.createElement("canvas");
