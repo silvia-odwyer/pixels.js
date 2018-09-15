@@ -122,6 +122,89 @@ const min_noise_imgdata = () => {
     return imgData;
 }
 
+const red_min_noise_imgdata = () => {
+    var rand = (0.5 - Math.random()) * 1;
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let randomColor1 = 0.6 + Math.random() * 0.6;
+
+        let randomColor2 = 0.6 + Math.random() * 0.4;
+
+        let randomColor3 = 0.6 + Math.random() * 0.4;
+
+        imgData.data[i] = imgData.data[i] * 0.99 * randomColor1; 
+        imgData.data[i + 1] = imgData.data[i + 1] * 0.99 * randomColor2;
+
+        imgData.data[i + 2] = imgData.data[i + 2] * 0.99 * randomColor3; 
+    }
+    return imgData;
+}
+
+const cool_twilight_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i + 1] = 255 - imgData.data[i + 1];
+    }
+    return imgData;
+}
+
+const blues_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i + 2] = 255 - imgData.data[i + 2];
+    }
+    return imgData;
+}
+
+const darkify_imgdata = () => {
+    let BRIGHTNESS_ADJ = 20;
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] -= BRIGHTNESS_ADJ
+        imgData.data[i + 1] -= BRIGHTNESS_ADJ
+        imgData.data[i + 2] -= BRIGHTNESS_ADJ
+    }
+    return imgData;
+}
+
+const incbrightness_imgdata = () => {
+    let BRIGHTNESS_ADJ = 50;
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] += BRIGHTNESS_ADJ
+        imgData.data[i + 1] += BRIGHTNESS_ADJ
+        imgData.data[i + 2] += BRIGHTNESS_ADJ
+    }
+    return imgData;
+}
+
+const greyscale_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        var avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = avg
+        imgData.data[i + 1] = avg
+        imgData.data[i + 2] = avg
+    }
+    return imgData;
+}
+
+const redgreyscale_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = avg + 100
+        imgData.data[i + 1] = avg + 40
+        imgData.data[i + 2] = avg + 20
+    }
+    return imgData;
+}
+
+const greengreyscale_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = avg + 20
+        imgData.data[i + 1] = avg + 70
+        imgData.data[i + 2] = avg + 20
+    }
+    return imgData;
+}
+
+
 
 const imgToCanvas = (img) => {
     var canvas = document.createElement("canvas");
