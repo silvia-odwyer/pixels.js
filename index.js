@@ -399,6 +399,70 @@ const aeon_imgdata = () => {
     return imgData;
 }
 
+const rosetint_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = avg + 80
+        imgData.data[i + 1] = avg + 20
+        imgData.data[i + 2] = avg + 31
+    }
+    return imgData;
+}
+
+const slate_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = avg + 4
+        imgData.data[i + 1] = avg + 3
+        imgData.data[i + 2] = avg + 12
+    }
+    return imgData;
+}
+
+const purplescale_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = avg + 90
+        imgData.data[i + 1] = avg + 40
+        imgData.data[i + 2] = avg + 80
+    }
+    return imgData;
+}
+
+const radio_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = avg + 5
+        imgData.data[i + 1] = avg + 40
+        imgData.data[i + 2] = avg + 20
+    }
+    return imgData;
+}
+
+const twenties_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        let avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = avg + 18
+        imgData.data[i + 1] = avg + 12
+        imgData.data[i + 2] = avg + 20
+    }
+    return imgData;
+}
+
+const ocean_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] += 10
+        imgData.data[i + 1] += 20
+        imgData.data[i + 2] += 90
+    }
+    return imgData;
+}
+
 
 const imgToCanvas = (img) => {
     var canvas = document.createElement("canvas");
