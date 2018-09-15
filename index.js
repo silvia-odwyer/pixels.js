@@ -283,6 +283,122 @@ const casino_imgdata = () => {
     return imgData;
 }
 
+const yellow_casino_imgdata = () => {
+
+    let inc = 0;
+    let inc2 = 0;
+    for (i = 0; i < imgData.data.length; i += 4) {
+        inc = getRandomNumber(0, 255);
+        inc2 = getRandomNumber(0, 255);
+
+        if (inc > 255) {
+            inc = 0;
+        }
+
+        let avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = avg + inc;
+        imgData.data[i + 1] = avg + inc2;
+        imgData.data[i + 2] = avg + 5;
+    }
+
+    return imgData;
+}
+
+const specks_imgdata = () => {
+    var inc = 0;
+    var inc2 = 0;
+    for (i = 0; i < imgData.data.length; i += 4) {
+        i = getRandomNumber(0, imgData.data.length);
+        inc = getRandomNumber(0, 255);
+        inc2 = getRandomNumber(0, 255);
+        inc3 = getRandomNumber(0, 255)
+        if (inc > 255) {
+            inc = 0;
+        }
+
+        var avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = (avg + inc);
+        imgData.data[i + 1] = avg + inc2;
+        imgData.data[i + 2] = avg + 5;
+    }
+    return imgData;
+}
+
+const incbrightness_two_imgdata = () => {
+    let inc = 0;
+    let inc2 = 0;
+    for (i = 0; i < imgData.data.length; i += 4) {
+        i = getRandomNumber(0, imgData.data.length);
+        inc = getRandomNumber(0, 255);
+        inc2 = getRandomNumber(0, 255);
+        inc3 = getRandomNumber(0, 255)
+        if (inc > 255) {
+            inc = 0;
+        }
+
+        var avg = (imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2]) / 3
+        imgData.data[i] = (avg + inc);
+        imgData.data[i + 1] = avg + inc2;
+        imgData.data[i + 2] = avg + 5;
+    }
+    return imgData;
+}
+
+const invert_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] = 255 - imgData.data[i];
+        imgData.data[i + 1] = 255 - imgData.data[i + 1];
+        imgData.data[i + 2] = 255 - imgData.data[i + 2];
+    }
+    return imgData;
+}
+
+const solange_dark_imgdata = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] = 200 - imgData.data[i];
+
+        // imgData.data[i + 1] = 255 - imgData.data[i + 1];
+        // imgData.data[i + 2] = 255 - imgData.data[i + 2];
+    }
+    return imgData;
+}
+
+const zapt_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        // imgData.data[i] = 255 - imgData.data[i];
+        imgData.data[i + 1] = 255 - imgData.data[i + 1];
+        // imgData.data[i + 2] = 255 - imgData.data[i + 2];
+    }
+    return imgData;
+}
+
+const neue_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i + 2] = 255 - imgData.data[i + 2];
+    }
+    return imgData;
+}
+
+const eon_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i + 1] = 120 - imgData.data[i + 1];
+        imgData.data[i + 2] = 100 - imgData.data[i + 2];
+    }
+    return imgData;
+}
+
+const aeon_imgdata = () => {
+
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i + 1] = 60 - imgData.data[i + 1];
+        imgData.data[i + 2] = 100 - imgData.data[i + 2];
+    }
+    return imgData;
+}
+
 
 const imgToCanvas = (img) => {
     var canvas = document.createElement("canvas");
