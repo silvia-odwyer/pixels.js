@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>FilterMagic Demo</title>
+        <script type='text/javascript' src='https://unpkg.com/lodash@4.16.6'></script>
+    </head>
+    <body>
+        <img src="hi.PNG" id="img"/>
+        <img src="code.JPG" id="img2"/>
+
+        <div id='root'>
+        </div>
+        <script type='text/javascript' src='./filterMagic.js'></script>
+        <script type='text/javascript'>            
+            var img = document.getElementById("img");
+            var img2 = document.getElementById("img2");
+            
+            var canvas = filterMagic.filterImg(img, "offset_blue");
+            var can2 = filterMagic.filterImg(img2, "offset")
+            document.body.append(canvas)
+            document.body.append(can2);
+        </script>
+    </body>
+
+
+</html>
