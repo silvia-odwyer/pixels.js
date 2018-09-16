@@ -9,10 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "image filtering", 
+    "image filtering",
     "image pixel manipulation",
-    "image processing", 
-    "browser", 
+    "image processing",
+    "browser",
     "node"
   ],
   "author": "Silvia O'Dwyer",
@@ -27,5 +27,8 @@
     "lodash": "^4.16.6",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.12"
+  },
+  "dependencies": {
+    "pureimage": "^0.1.6"
   }
 }
