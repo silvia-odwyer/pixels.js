@@ -39,3 +39,23 @@ in Node, your environment and canvas libraries can differ, so we've kept usage f
 
 Simple get the image data of the image and pass it to the filterImgData function. The output will be the new image data. 
 You can then place this new image data onto your canvas.
+
+```javascript
+const get-image-data = require('get-image-data');
+const filterMagic = require("filterMagic");
+const Canvas = require('canvas')
+
+var canvas = new Canvas(200, 200),
+    ctx = canvas.getContext('2d'),
+
+get-image-data('./image.jpg', function(error, info) {
+  var imgData = info.data
+  
+  let newImgData = filterMagic.filterImgData(imgData, "solange");
+  
+  ctx.putImageData(imgData, 0, 0);
+  
+})
+```
+
+!["Usage code for Node.JS"](https://github.com/silvia-odwyer/FilterMagic/blob/master/node_code.png "Usage code for NodeJS")
