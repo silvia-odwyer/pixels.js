@@ -13,13 +13,18 @@ which makes use of the library.
 
 ## Importing FilterMagic
 ### In The Browser
-Include the following script tag in your page's head tag:
+Include the following script tag in your page's head tag: `<script src="unpkg.com/FilterMagic.js"></script>`
 
 ### Node.JS
-Node.JS support is coming soon!
+`npm install filtermagic`
+
 
 ### Using FilterMagic
-1. Include the image on the webpage. <img src="path/to/image.PNG">
+#### Browser
+Inline-style: 
+!["Usage code for the browser"](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Usage code for the browser")
+
+1. Include the image on the webpage. `<img src="path/to/image.PNG">`
 
 2. In your JS, select the image you want to add filters to. `var img = document.getElementById("img")`
 
@@ -28,3 +33,10 @@ Node.JS support is coming soon!
 
 The method filters the image and replaces the current image with the filtered one, so there's no need to append the new image to the DOM, as this is already
 done for you.
+
+#### Node.JS
+Usage for Node.JS varies slightly to the browser. Whereas in-browser FilterMagic automatically replaces the image on the webpage with the newly filtered one, 
+in Node, your environment and canvas libraries can differ, so we've kept usage flexible for Node. 
+
+Simple get the image data of the image and pass it to the filterImgData function. The output will be the new image data. 
+You can then place this new image data onto your canvas.
