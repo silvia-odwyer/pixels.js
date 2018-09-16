@@ -21,8 +21,7 @@ Include the following script tag in your page's head tag: `<script src="unpkg.co
 
 ### Using FilterMagic
 #### Browser
-Inline-style: 
-!["Usage code for the browser"](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Usage code for the browser")
+!["Usage code for the browser"](https://github.com/silvia-odwyer/FilterMagic/blob/master/browser_code.png "Usage code for the browser")
 
 1. Include the image on the webpage. `<img src="path/to/image.PNG">`
 
