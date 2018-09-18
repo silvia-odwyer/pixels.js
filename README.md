@@ -19,9 +19,11 @@ Include the following script tag in your page's head tag: `<script src="unpkg.co
 
 
 ## Using Pixels.JS
-#### Browser
+### Browser
 ##### HTML
+```html
 <img src="image.PNG" id="img"/> 
+```
 
 ##### Javascript
 ```javascript
@@ -30,22 +32,12 @@ var img = document.getElementById("img")
 // First parameter is the image object, and the second is the filter you wish to apply.
 pixelsJS.filterImg(img, "twenties");      
 ```
-1. Include the image on the webpage. `<img src="path/to/image.PNG">`
-
-2. In your JS, select the image you want to add filters to. `var img = document.getElementById("img")`
-
-3. Pass the image into the filter function, and include the name of the filter you want. 
-`var filtered_img = Pixels.JS.filterImg(img, "sepia")`
-
-The method filters the image and replaces the current image with the filtered one, so there's no need to append the new image to the DOM, as this is already
-done for you.
 
 #### Node.JS
 Usage for Node.JS varies slightly to the browser. Whereas in-browser Pixels.JS automatically replaces the image on the webpage with the newly filtered one, 
 in Node, your environment and canvas libraries can differ, so we've kept usage flexible for Node. 
 
-Simply get the image data of the image and pass it to the filterImgData function. The output will be the new image data. 
-You can then place this new image data onto your canvas.
+This example uses node-canvas and get-image-data, two NPM modules that make canvas rendering easier, however, you can choose whatever libraries you like; this example merely illustrates using Pixels.js in tandem with node-canvas. 
 
 ```javascript
 const get-image-data = require('get-image-data');
@@ -64,5 +56,25 @@ get-image-data('./image.jpg', function(error, info) {
   
 })
 ```
+
+## Step-By-Step Guide
+You can quickly get started with Pixels.JS using the sample code above, but if you're new to web development or want a guided tour, 
+just check out the guides below. 
+
+### Browser
+1. Include the image on the webpage. `<img src="path/to/image.PNG">`
+
+2. In your JS, select the image you want to add filters to. `var img = document.getElementById("img")`
+
+3. Pass the image into the filter function, and include the name of the filter you want. 
+`var filtered_img = Pixels.JS.filterImg(img, "sepia")`
+
+The method filters the image and replaces the current image with the filtered one, so there's no need to append the new image to the DOM, as this is already
+done for you. 
+
+### Node.JS
+Simply get the image data of the image and pass it to the filterImgData function. The output will be the new image data. 
+You can then place this new image data onto your canvas.
+
 
 !["Usage code for Node.JS"](https://github.com/silvia-odwyer/Pixels.JS/blob/master/node_code.png "Usage code for NodeJS")
