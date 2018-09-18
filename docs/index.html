@@ -20,6 +20,7 @@
   <link type="text/css" href="./assets/css/docs.min.css" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script src="assets/js/filtering.js"></script>
 
   <!-- Highlight source code -->
   <link rel="stylesheet" href="assets/js/highlight/highlight/styles/agate.css">
@@ -35,8 +36,8 @@
       <div class="container">
         <a class="navbar-brand mr-lg-5" href="./index.html">
           <div class="icon icon-shape mb-8">
-              <i class="ni ni-ungroup"></i>
-            </div>
+            <i class="ni ni-ungroup"></i>
+          </div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -271,8 +272,10 @@
 
             <section>
               <h2 class="space-above">Usage</h2>
-              <p>Pixels.js is compatible with both the browser and Node.JS, however usage varies depending on which you're using. 
-                Make sure to read the notes provided with each, and if you have any issues, you can contact me on Discord (Silvia923#9909)
+              <p>Pixels.js is compatible with both the browser and Node.JS, however usage varies depending on which
+                you're using.
+                Make sure to read the notes provided with each, and if you have any issues, you can contact me on
+                Discord (Silvia923#9909)
                 or open an issue on GitHub.
               </p>
               <h3>For Browser Use</h3>
@@ -860,73 +863,74 @@
             </div>
           </div>
 
-      <div class="row">
+          <div class="row">
 
-        <div class="col-md-4">
-          <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-form">Form</button>
-          <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-            <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
-              <div class="modal-content">
-                <div class="modal-body p-0">
-                  <div class="card bg-secondary shadow border-0">
-                    <div class="card-header bg-white pb-5">
-                      <div class="text-muted text-center mb-3">
-                        <small>Sign in with</small>
-                      </div>
-                      <div class="btn-wrapper text-center">
-                        <a href="#" class="btn btn-neutral btn-icon">
-                          <span class="btn-inner--icon">
-                            <img src="./assets/img/icons/common/github.svg">
-                          </span>
-                          <span class="btn-inner--text">Github</span>
-                        </a>
-                        <a href="#" class="btn btn-neutral btn-icon">
-                          <span class="btn-inner--icon">
-                            <img src="./assets/img/icons/common/google.svg">
-                          </span>
-                          <span class="btn-inner--text">Google</span>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="card-body px-lg-5 py-lg-5">
-                      <div class="text-center text-muted mb-4">
-                        <small>Or sign in with credentials</small>
-                      </div>
-                      <form role="form">
-                        <div class="form-group mb-3">
-                          <div class="input-group input-group-alternative">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                            </div>
-                            <input class="form-control" placeholder="Email" type="email">
+            <div class="col-md-4">
+              <button type="button" class="btn btn-block btn-default" data-toggle="modal" data-target="#modal-form">Form</button>
+              <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form"
+                aria-hidden="true">
+                <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body p-0">
+                      <div class="card bg-secondary shadow border-0">
+                        <div class="card-header bg-white pb-5">
+                          <div class="text-muted text-center mb-3">
+                            <small>Sign in with</small>
+                          </div>
+                          <div class="btn-wrapper text-center">
+                            <a href="#" class="btn btn-neutral btn-icon">
+                              <span class="btn-inner--icon">
+                                <img src="./assets/img/icons/common/github.svg">
+                              </span>
+                              <span class="btn-inner--text">Github</span>
+                            </a>
+                            <a href="#" class="btn btn-neutral btn-icon">
+                              <span class="btn-inner--icon">
+                                <img src="./assets/img/icons/common/google.svg">
+                              </span>
+                              <span class="btn-inner--text">Google</span>
+                            </a>
                           </div>
                         </div>
-                        <div class="form-group">
-                          <div class="input-group input-group-alternative">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                            </div>
-                            <input class="form-control" placeholder="Password" type="password">
+                        <div class="card-body px-lg-5 py-lg-5">
+                          <div class="text-center text-muted mb-4">
+                            <small>Or sign in with credentials</small>
                           </div>
+                          <form role="form">
+                            <div class="form-group mb-3">
+                              <div class="input-group input-group-alternative">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                </div>
+                                <input class="form-control" placeholder="Email" type="email">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="input-group input-group-alternative">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                </div>
+                                <input class="form-control" placeholder="Password" type="password">
+                              </div>
+                            </div>
+                            <div class="custom-control custom-control-alternative custom-checkbox">
+                              <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
+                              <label class="custom-control-label" for=" customCheckLogin">
+                                <span>Remember me</span>
+                              </label>
+                            </div>
+                            <div class="text-center">
+                              <button type="button" class="btn btn-primary my-4">Sign in</button>
+                            </div>
+                          </form>
                         </div>
-                        <div class="custom-control custom-control-alternative custom-checkbox">
-                          <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-                          <label class="custom-control-label" for=" customCheckLogin">
-                            <span>Remember me</span>
-                          </label>
-                        </div>
-                        <div class="text-center">
-                          <button type="button" class="btn btn-primary my-4">Sign in</button>
-                        </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
       </div>
       </div>
     </section>
@@ -1128,9 +1132,11 @@
             <h2 class="display-3">Pixels.js is always improving
               <span class="text-success">and we're always adding new photo filters.</span>
             </h2>
-            <p class="lead">If you'd like to contribute, we're open-source, MIT-licensed, and always ready to accept pull requests.</p>
+            <p class="lead">If you'd like to contribute, we're open-source, MIT-licensed, and always ready to accept
+              pull requests.</p>
             <div class="btn-wrapper">
-              <a href="https://github.com/silvia-odwyer/FilterMagic" class="btn btn-primary mb-3 mb-sm-0">View on GitHub</a>
+              <a href="https://github.com/silvia-odwyer/FilterMagic" class="btn btn-primary mb-3 mb-sm-0">View on
+                GitHub</a>
             </div>
             <div class="text-center">
               <h4 class="display-4 mb-5 mt-5">Compatible with these technologies</h4>
@@ -1172,6 +1178,21 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="tiles">
+      <canvas id="canvas" height="300" width="300"></canvas>
+
+      <article class="tile">
+      </article>
+      <article class="tile">
+      </article>
+      <article class="tile">
+      </article>
+      <article class="tile">
+      </article>
+      <article class="tile">
+      </article>
     </section>
   </main>
   <footer class="footer has-cards">
