@@ -66,18 +66,23 @@
     }
 
     function assembleFilteredPhotos() {
-        const group = [offset_imgdata, offset_blue_imgdata, offset_green_imgdata, haze_imgdata, pink_aura_imgdata, serenity_imgdata, perfume_imgdata, vintage_imgdata, evening_imgdata, mellow_imgdata, red_min_noise_imgdata, greyscale_imgdata, specksredscale_imgdata, blue_greyscale_imgdata, twenties_imgdata, radio_imgdata, redgreyscale_imgdata, purplescale_imgdata, slate_imgdata, cosmic_imgdata, matrix_imgdata, eclectic_imgdata, green_specks_imgdata, rosetint_imgdata, horizon_imgdata, pink_min_noise_imgdata, confetti_imgdata, retroviolet_imgdata, ocean_imgdata, incbrightness_two_imgdata, noise_centre_imgdata, sat_adj_imgdata, specks_imgdata, yellow_casino_imgdata, casino_imgdata, aeon_imgdata, eon_imgdata, neue_imgdata, zapt_imgdata, solange_imgdata, solange_dark_imgdata, lix_conv, ryo_conv, blues_imgdata, cool_twilight_imgdata, incbrightness_imgdata, greengreyscale_imgdata, add_green_diagonal_lines_imgdata, add_diagonal_lines_imgdata, add_horizontal_line_imgdata, pane_imgdata, min_noise_imgdata, green_med_noise_imgdata, green_min_noise_imgdata, blue_min_noise_imgdata, dark_purple_min_noise_imgdata, lemon_imgdata, coral_imgdata, darkify_imgdata, frontward_imgdata, solange_grey_imgdata]
+        var filters = ["a", "offset_blue", "offset", "offset_green", "solange_grey", "invert", "lemon", "coral", "dark_purple_min_noise", "green_med_noise", "teal_min_noise", "blue_min_noise", "green_min_noise", "green_med_noise", "pink_min_noise", "red_min_noise", "min_noise", "pane", "add_horizontal_lines", "add_diagonal_lines", "add_green_diagonal_lines", "greengreyscale", "darkify", "incbrightness", "cool_twilight", "blues", "ryo", "lix", "casino", "yellow_casino", "specks", "sat_adj", "noise_centre", "greenspecks", "eclectic", "matrix", "cosmic", "solange_dark", "solange", "zapt", "neue", "eon", "aeon", "ocean", "confetti", "horizon", "rosetint", "slate", "purplescale", "redgreyscale", "radio", "specks_redscale", "twenties", "greyscale", "mellow", "vintage", "evening", "bluegreyscale", "perfume", "pink_aura", "serenity", "bluegreyscale", "retroviolet", "haze", "frontward"]
 
-        for (let j = 0; j < canvas_list.length; j += 1) {
+        for (let j = 0; j < filters.length; j += 1) {
+            let filter = filters[j]
             let current_canvas = canvas_list[j];
+            let tile = tiles[j];
+            let name = document.createElement("p")
+            name.innerHTML = filter
+            tile.appendChild(name)
             console.log(current_canvas);
 
             let getctx = current_canvas.getContext("2d");
             imgData = ctx.getImageData(0, 0, c.width, c.height);
-
-            // let resImgData = group[j]();
-            console.log(resImgData);
-            getctx.putImageData(imgData, 0, 0);
+            console.log(imgData)
+            let resImgData = filterMagic.filterImgData(imgData, filter);
+        
+            getctx.putImageData(resImgData, 0, 0);
         }
     }
 
