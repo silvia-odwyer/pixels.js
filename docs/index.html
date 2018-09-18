@@ -18,17 +18,11 @@
   <link type="text/css" href="./assets/css/argon.css?v=1.0.1" rel="stylesheet">
   <!-- Docs CSS -->
   <link type="text/css" href="./assets/css/docs.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism-okaidia.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script src="assets/js/filtering.js"></script>
   <script src="../dist/filterMagic.js"></script>
-
-
-  <!-- Highlight source code -->
-  <link rel="stylesheet" href="assets/js/highlight/highlight/styles/agate.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/highlight/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -282,19 +276,17 @@
               </p>
               <h3>For Browser Use</h3>
               <h5 id="browser_html">HTML</h5>
+              <pre><code class="language-html">
+                  &lt;img src="image.PNG" id="img" /&gt;
+              </code></pre>
 
-              <!-- Since HTML tags cannot be directly included as "example/sample code" without 
-              being parsed as HTML, the HTML code is added with JavaScript. -->
-              <pre><code class="js">
-              </code></pre>
               <h5>JavaScript</h5>
-              <pre><code class="js">
-                // Select the image you wish to filter
-                var img = document.getElementById("img")
-                
-                // First parameter is the image object, and the second is the filter you wish to apply.
-                pixelsJS.filterImg(img, "twenties"); 
-              </code></pre>
+              <pre><code class="language-js">
+                  // Select the image you wish to filter
+                  var img = document.getElementById("img")
+                  
+                  // First parameter is the image object, and the second is the filter you wish to apply.
+                  pixelsJS.filterImg(img, "twenties");               </code></pre>
               <img src="assets/img/carbon1.PNG" />
 
               <!-- <ol>
@@ -329,23 +321,25 @@
                 with node-canvas.
               </p>
 
-              <pre><code class="js">
-                    const get-image-data = require('get-image-data');
-                    const pixelsJS = require("pixelsjs");
-                    const Canvas = require('canvas')
+              <pre><code class="language-js">
+                  const get-image-data = require('get-image-data');
+                  const pixelsJS = require("pixelsjs");
+                  const Canvas = require('canvas')
+                  
+                  var canvas = new Canvas(200, 200),
+                      ctx = canvas.getContext('2d'),
+                  
+                  get-image-data('./image.jpg', function(error, info) {
+                    var imgData = info.data
                     
-                    var canvas = new Canvas(200, 200),
-                        ctx = canvas.getContext('2d'),
+                    let newImgData = pixelsJS.filterImgData(imgData, "solange");
                     
-                    get-image-data('./image.jpg', function(error, info) {
-                      var imgData = info.data
-                      
-                      let newImgData = pixelsJS.filterImgData(imgData, "solange");
-                      
-                      ctx.putImageData(imgData, 0, 0);
-                      
-                    })
-                </code></pre>
+                    ctx.putImageData(imgData, 0, 0);
+                    
+                  })            
+                </code>
+              </pre>
+
               <p></p>
               <!-- <ol>
                   <li>Add your desired image to your webpage: <img src="path/to/image.PNG">
@@ -370,186 +364,189 @@
 
 
           </div>
+
+          <section class="tiles">
+            <canvas id="canvas" height="300" width="300"></canvas>
+
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+            <article class="tile">
+            </article>
+          </section>
         </div>
       </div>
+
+
     </section>
 
-    
-    <section class="tiles">
-        <canvas id="canvas" height="300" width="300"></canvas>
-  
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-  
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-        <article class="tile">
-        </article>
-      </section>
+
 
     <section class="section section-shaped">
       <div class="shape shape-style-1 shape-default">
@@ -612,7 +609,10 @@
     </section>
 
     <section class="section section-lg">
+
       <div class="container">
+        <img src="assets/img/demo_gif_city.GIF" class="card-img">
+
         <div class="row row-grid justify-content-center">
           <div class="col-lg-8 text-center">
             <h2 class="display-3">Pixels.js is always improving
@@ -668,28 +668,11 @@
 
   </main>
   <footer class="footer has-cards">
-    <div class="container container-lg">
-      <div class="row">
-        <div class="col-md-6 mb-5 mb-md-0">
-          <div class="card card-lift--hover shadow border-0">
-            <a href="./examples/landing.html" title="Landing Page">
-              <img src="./assets/img/theme/landing.jpg" class="card-img">
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 mb-5 mb-lg-0">
-          <div class="card card-lift--hover shadow border-0">
-            <a href="./examples/profile.html" title="Profile Page">
-              <img src="./assets/img/theme/profile.jpg" class="card-img">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="container">
       <div class="row row-grid align-items-center my-md">
         <div class="col-lg-6">
-          <h3 class="text-primary font-weight-light mb-2">Thank you for checking out FilterMagic!</h3>
+          <h3 class="text-primary font-weight-light mb-2">Thank you for checking out Pixels.js!</h3>
           <h4 class="mb-0 font-weight-light">Get in touch on any of these platforms.</h4>
         </div>
         <div class="col-lg-6 text-lg-center btn-wrapper">
