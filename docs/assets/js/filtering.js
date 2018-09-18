@@ -20,7 +20,7 @@
         console.log(tiles);
         // document.getElementById('img_uploader').addEventListener('change', readURL, true);
         appendCanvases();
-
+        filterDemoImages();
         // Init default image
         img = document.createElement("img");
 
@@ -35,6 +35,12 @@
         }
         img.src = current_img_url;
     }
+
+    function filterDemoImages() {
+        var skyscraper_img = document.getElementById("filtered_skyscrapers");
+        filterMagic.filterImg(skyscraper_img, "perfume")
+    }
+
 
     function appendCanvases() {
         // Create for loop which creates canvases and then appends them to a list. 
@@ -66,7 +72,7 @@
     }
 
     function assembleFilteredPhotos() {
-        var filters = ["a", "offset_blue", "offset", "offset_green", "solange_grey", "invert", "lemon", "coral", "dark_purple_min_noise", "green_med_noise", "teal_min_noise", "blue_min_noise", "green_min_noise", "green_med_noise", "pink_min_noise", "red_min_noise", "min_noise", "pane", "add_horizontal_lines", "add_diagonal_lines", "add_green_diagonal_lines", "greengreyscale", "darkify", "incbrightness", "cool_twilight", "blues", "ryo", "lix", "casino", "yellow_casino", "specks", "sat_adj", "noise_centre", "greenspecks", "eclectic", "matrix", "cosmic", "solange_dark", "solange", "zapt", "neue", "eon", "aeon", "ocean", "confetti", "horizon", "rosetint", "slate", "purplescale", "redgreyscale", "radio", "specks_redscale", "twenties", "greyscale", "mellow", "vintage", "evening", "bluegreyscale", "perfume", "pink_aura", "serenity", "bluegreyscale", "retroviolet", "haze", "frontward"]
+        var filters = ["perfume", "extra_offset_green", "extreme_offset_green", "grime", "warmth", "wood", "sunset", "crimson", "extreme_offset_red", "extreme_offset_blue", "extra_offset_red", "phase", "pink_aura", "serenity", "bluegreyscale", "retroviolet", "haze", "twenties", "greyscale", "mellow", "vintage", "evening", "bluegreyscale", "a", "offset_blue", "offset", "offset_green", "solange_grey", "invert", "lemon", "coral", "dark_purple_min_noise", "green_med_noise", "teal_min_noise", "blue_min_noise", "green_min_noise", "green_med_noise", "pink_min_noise", "red_min_noise", "min_noise", "pane", "add_horizontal_lines", "add_diagonal_lines", "add_green_diagonal_lines", "greengreyscale", "darkify", "incbrightness", "cool_twilight", "blues", "ryo", "lix", "casino", "yellow_casino", "specks", "sat_adj", "noise_centre", "greenspecks", "eclectic", "matrix", "cosmic", "solange_dark", "solange", "zapt", "neue", "eon", "aeon", "ocean", "confetti", "horizon", "rosetint", "slate", "purplescale", "redgreyscale", "radio", "specks_redscale", "frontward"]
 
         for (let j = 0; j < filters.length; j += 1) {
             let filter = filters[j]
@@ -74,6 +80,7 @@
             let tile = tiles[j];
             let name = document.createElement("p")
             name.innerHTML = filter
+            name.className = "text-primary"
             tile.appendChild(name)
             console.log(current_canvas);
 
