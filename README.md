@@ -18,10 +18,18 @@ Include the following script tag in your page's head tag: `<script src="unpkg.co
 `npm install Pixels.JS`
 
 
-### Using Pixels.JS
+## Using Pixels.JS
 #### Browser
-!["Usage code for the browser"](https://github.com/silvia-odwyer/Pixels.JS/blob/master/browser_code.png "Usage code for the browser")
+##### HTML
+<img src="image.PNG" id="img"/> 
 
+##### Javascript
+```javascript
+// Select the image you wish to filter
+var img = document.getElementById("img")
+// First parameter is the image object, and the second is the filter you wish to apply.
+pixelsJS.filterImg(img, "twenties");      
+```
 1. Include the image on the webpage. `<img src="path/to/image.PNG">`
 
 2. In your JS, select the image you want to add filters to. `var img = document.getElementById("img")`
