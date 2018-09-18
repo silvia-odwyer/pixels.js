@@ -3,7 +3,7 @@ var imgData;
 let i, addition, addition1, addition2;
 
 function filterMagic() {
-    var filter_dict = { "a": a, "offset" : offset, "offset_blue": offset_blue_imgdata, "offset_green": offset_green_imgdata, "solange_grey": solange_grey_imgdata, "invert": invert_imgdata, "lemon": lemon_imgdata, "coral": coral_imgdata, "dark_purple_min_noise": dark_purple_min_noise_imgdata, "green_med_noise": green_med_noise_imgdata, "teal_min_noise": teal_min_noise_imgdata, "blue_min_noise": blue_min_noise_imgdata, "green_min_noise": green_min_noise_imgdata, "green_med_noise": green_med_noise_imgdata, "pink_min_noise": pink_min_noise_imgdata, "red_min_noise": red_min_noise_imgdata, "min_noise": min_noise_imgdata, "pane": pane_imgdata, "add_horizontal_lines": add_horizontal_line_imgdata, "add_diagonal_lines": add_diagonal_lines_imgdata, "add_green_diagonal_lines": add_green_diagonal_lines_imgdata, "greengreyscale": greengreyscale_imgdata, "darkify": darkify_imgdata, "incbrightness": incbrightness_imgdata, "cool_twilight": cool_twilight_imgdata, "blues": blues_imgdata, "ryo": ryo_conv, "lix": lix_conv, "casino": casino_imgdata, "yellow_casino": yellow_casino_imgdata, "specks": specks_imgdata, "sat_adj": sat_adj_imgdata, "noise_centre": noise_centre_imgdata, "greenspecks": green_specks_imgdata, "eclectic": eclectic_imgdata, "matrix": matrix_imgdata, "cosmic": cosmic_imgdata, "solange_dark": solange_dark_imgdata, "solange": solange_imgdata, "zapt": zapt_imgdata, "neue": neue_imgdata, "eon": eon_imgdata, "aeon": aeon_imgdata, "ocean": ocean_imgdata, "confetti": confetti_imgdata, "horizon": horizon_imgdata, "rosetint": rosetint_imgdata, "slate": slate_imgdata, "purplescale": purplescale_imgdata, "redgreyscale": redgreyscale_imgdata, "radio": radio_imgdata, "specks_redscale": specksredscale_imgdata, "twenties": twenties_imgdata, "greyscale": greyscale_imgdata, "mellow": mellow_imgdata, "vintage": vintage_imgdata, "evening": evening_imgdata, "bluegreyscale": blue_greyscale_imgdata, "perfume": perfume_imgdata, "pink_aura": pink_aura_imgdata, "serenity": serenity_imgdata, "bluegreyscale": blue_greyscale_imgdata, "retroviolet": retroviolet_imgdata, "haze": haze_imgdata, "frontward": frontward_imgdata }
+    var filter_dict = { "a": a, "warmth": warmth, "wood" : wood, "grime" : grime, "crimson" : crimson, "phase" : phase, "sunset" : sunset, "offset" : offset, "offset_blue": offset_blue_imgdata, "offset_green": offset_green_imgdata, "solange_grey": solange_grey_imgdata, "invert": invert_imgdata, "lemon": lemon_imgdata, "coral": coral_imgdata, "dark_purple_min_noise": dark_purple_min_noise_imgdata, "green_med_noise": green_med_noise_imgdata, "teal_min_noise": teal_min_noise_imgdata, "blue_min_noise": blue_min_noise_imgdata, "green_min_noise": green_min_noise_imgdata, "green_med_noise": green_med_noise_imgdata, "pink_min_noise": pink_min_noise_imgdata, "red_min_noise": red_min_noise_imgdata, "min_noise": min_noise_imgdata, "pane": pane_imgdata, "add_horizontal_lines": add_horizontal_line_imgdata, "add_diagonal_lines": add_diagonal_lines_imgdata, "add_green_diagonal_lines": add_green_diagonal_lines_imgdata, "greengreyscale": greengreyscale_imgdata, "darkify": darkify_imgdata, "incbrightness": incbrightness_imgdata, "cool_twilight": cool_twilight_imgdata, "blues": blues_imgdata, "ryo": ryo_conv, "lix": lix_conv, "casino": casino_imgdata, "yellow_casino": yellow_casino_imgdata, "specks": specks_imgdata, "sat_adj": sat_adj_imgdata, "noise_centre": noise_centre_imgdata, "greenspecks": green_specks_imgdata, "eclectic": eclectic_imgdata, "matrix": matrix_imgdata, "cosmic": cosmic_imgdata, "solange_dark": solange_dark_imgdata, "solange": solange_imgdata, "zapt": zapt_imgdata, "neue": neue_imgdata, "eon": eon_imgdata, "aeon": aeon_imgdata, "ocean": ocean_imgdata, "confetti": confetti_imgdata, "horizon": horizon_imgdata, "rosetint": rosetint_imgdata, "slate": slate_imgdata, "purplescale": purplescale_imgdata, "redgreyscale": redgreyscale_imgdata, "radio": radio_imgdata, "specks_redscale": specksredscale_imgdata, "twenties": twenties_imgdata, "greyscale": greyscale_imgdata, "mellow": mellow_imgdata, "vintage": vintage_imgdata, "evening": evening_imgdata, "bluegreyscale": blue_greyscale_imgdata, "perfume": perfume_imgdata, "pink_aura": pink_aura_imgdata, "serenity": serenity_imgdata, "bluegreyscale": blue_greyscale_imgdata, "retroviolet": retroviolet_imgdata, "haze": haze_imgdata, "frontward": frontward_imgdata }
 
     return {
 
@@ -64,6 +64,61 @@ const checkIfBrowser = () => {
         return true
     }
     return false
+}
+
+
+const warmth = function () {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] = imgData.data[i] + 10
+        imgData.data[i + 1] = imgData.data[i + 1] + 18
+    }
+    return imgData;
+}
+
+const crimson = function () {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] = imgData.data[i] + 20
+        imgData.data[i + 1] = imgData.data[i + 2] + 20
+    }
+    return imgData;
+}
+
+
+
+const phase = function () {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] = imgData.data[i] + getRandomNumber(10, 20)
+        imgData.data[i + 1] = imgData.data[i + 2] + getRandomNumber(10, 20)
+
+        imgData.data[i + 2] = imgData.data[i + 2] + getRandomNumber(10, 20)
+    }
+    return imgData;
+}
+
+const grime = function () {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i + 1] = imgData.data[i] + 5;
+        imgData.data[i] = imgData.data[i] + 1;
+    }
+    return imgData;
+}
+
+
+
+const sunset = function () {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i + 1] = imgData.data[i] + 50;
+        imgData.data[i + 2] = imgData.data[i + 2] + 12;
+    }
+    return imgData;
+}
+
+const wood = () => {
+    for (i = 0; i < imgData.data.length; i += 4) {
+        imgData.data[i] = imgData.data[i] + 30
+        imgData.data[i + 1] = imgData.data[i + 1] + 12;
+    }
+    return imgData;
 }
 
 const offset = () => {
