@@ -12,3 +12,28 @@
 .space-above {
     margin-top: 1em;
 }
+
+.tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 2em;
+}
+
+.imgs, .demo_imgs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.demo_imgs {
+    margin-top: 0.4em;
+
+}
+
+.night {
+    display: inline-block;
+    margin:10px 0 0 2%;
+    flex-grow: 1;
+    width: calc(100% * (1/4) - 10px - 1px);
+}
