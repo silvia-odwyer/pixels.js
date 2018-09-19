@@ -7,6 +7,8 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)
 ![GitHub last commit](https://img.shields.io/badge/filters-71-blue.svg)
 
+![PixelsJS Header](https://github.com/silvia-odwyer/pixels.js/blob/master/pixels_header.PNG "PixelsJS Header")
+
 Pixels.JS is an  image filtering library with over 70 photo filters for use in the browser or with Node.JS.
 
 Image filtering comprises vintage filters, solarizers, inverters, and over ninety more. You can explore these in the Flashback web app, 
