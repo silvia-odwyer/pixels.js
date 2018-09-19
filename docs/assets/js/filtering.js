@@ -37,10 +37,17 @@
     }
 
     function filterDemoImages() {
-        var skyscraper_img = document.getElementById("filtered_skyscrapers");
-        filterMagic.filterImg(skyscraper_img, "perfume")
-    }
+        var night_imgs = document.querySelectorAll(".citynight");
 
+        var filters_skyscrapers = ["twenties", "ocean", "perfume", "warmth", "solange", "extreme_offset_red"]
+        for (let i = 0; i < filters_skyscrapers.length; i += 1) {
+            let img = night_imgs[i];
+            console.log("currently on", img);
+            pixelsJS.filterImg(img, filters_skyscrapers[i]);
+        };        
+
+
+    }
 
     function appendCanvases() {
         // Create for loop which creates canvases and then appends them to a list. 
@@ -87,7 +94,7 @@
             let getctx = current_canvas.getContext("2d");
             imgData = ctx.getImageData(0, 0, c.width, c.height);
             console.log(imgData)
-            let resImgData = filterMagic.filterImgData(imgData, filter);
+            let resImgData = pixelsJS.filterImgData(imgData, filter);
         
             getctx.putImageData(resImgData, 0, 0);
         }
