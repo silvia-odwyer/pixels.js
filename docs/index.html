@@ -22,7 +22,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script src="assets/js/filtering.js"></script>
-  <script src="../dist/filterMagic.js"></script>
+  <script src="../dist/Pixels.js"></script>
 
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -258,7 +258,7 @@
                           <h6 class="text-warning text-uppercase">View on GitHub</h6>
                           <p class="description mt-3">If you'd like to compile from source, just clone Pixels.js on
                             GitHub.</p>
-                          <a href="#" class="btn btn-warning mt-4">View on GitHub</a>
+                          <a href="https://github.com/silvia-odwyer/pixels.js" class="btn btn-warning mt-4">View on GitHub</a>
                         </div>
                       </div>
                     </div>
@@ -273,9 +273,27 @@
               </h2>
 
               <article class="imgs">
-                <img src="assets/img/skyscrapers.PNG" height="150" width="200"/>
-                <img src="assets/img/skyscrapers.PNG" height="150" width="200" id="filtered_skyscrapers" />
-                <img src="assets/img/skyscrapers.PNG" height="150" width="200" id="filtered_skyscrapers" />
+                <img src="assets/img/skyscrapers.PNG"/>
+                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
+                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
+                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
+                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
+                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
+                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
+                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
+
+                
+                <img src="assets/img/citynight.PNG" class="city" />
+                <img src="assets/img/citynight.PNG" class="city" />
+                <img src="assets/img/citynight.PNG" class="city" />
+                <img src="assets/img/citynight.PNG" class="city" />
+
+                <img src="assets/img/night.PNG" class="night" />
+                <img src="assets/img/night.PNG" class="night" />
+                <img src="assets/img/night.PNG" class="night" />
+                <img src="assets/img/night.PNG" class="night" />
+
+
 
               </article>
 
@@ -562,48 +580,54 @@
     </section>
 
     <section class="section section-lg bg-gradient-default">
-      <div class="container pt-lg pb-300">
-        <div class="row text-center justify-content-center">
-          <div class="col-lg-10">
-            <h2 class="display-3 text-white">Filters Available</h2>
-            <p class="lead text-white">From electric, cyberpunk filters to pastel tinted filters and everything in
-              between, Pixels.js has a filter to show your image's unique flair.</p>
+        <div class="container pt-lg">
+          <div class="row text-center justify-content-center">
+            <div class="col-lg-10">
+              <h2 class="display-3 text-white">Filters Available</h2>
+              
+              <article class="demo_imgs">
+                  <img src="assets/img/city2.PNG" class="citynight" />
+                  <img src="assets/img/city2.PNG" class="citynight" />
+                  <img src="assets/img/city2.PNG" class="citynight" />
+                  <img src="assets/img/city2.PNG" class="citynight" />
+                  <img src="assets/img/city2.PNG" class="citynight" />
+                  <img src="assets/img/city2.PNG" class="citynight" />
+
+              </article>
+
+              <p class="lead text-white">From electric, cyberpunk filters to pastel tinted filters and everything in
+                between, Pixels.js has a filter to show your image's unique flair.</p>
+            </div>
+          </div>
+          <div class="row row-grid mt-5">
+            <div class="col-lg-4">
+              <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                <i class="ni ni-settings text-primary"></i>
+              </div>
+              <h5 class="text-white mt-3">Vintage</h5>
+              <p class="text-white mt-3">From 1920s glamour to Parisian chic, from subtle violet tints to greyscale
+                filters, vintage filters can help bring your photo back in time. </p>
+            </div>
+            <div class="col-lg-4">
+              <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                <i class="ni ni-ruler-pencil text-primary"></i>
+              </div>
+              <h5 class="text-white mt-3">Retro</h5>
+              <p class="text-white mt-3">Faded hues, noisy filters, and glam tints encompass the retro filters on offer. We've got all the 1980s Retro Chic filters you've been looking for..</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                <i class="ni ni-atom text-primary"></i>
+              </div>
+              <h5 class="text-white mt-3">Cyberpunk</h5>
+              <p class="text-white mt-3">Electric effects and maximum noise dominate the cyberpunk filter collection.</p>
+            </div>
           </div>
         </div>
-        <div class="row row-grid mt-5">
-          <div class="col-lg-4">
-            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-              <i class="ni ni-settings text-primary"></i>
-            </div>
-            <h5 class="text-white mt-3">Vintage</h5>
-            <p class="text-white mt-3">From 1920s glamour to Parisian chic, from subtle violet tints to greyscale
-              filters, vintage filters can help bring your photo back in time. </p>
-          </div>
-          <div class="col-lg-4">
-            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-              <i class="ni ni-ruler-pencil text-primary"></i>
-            </div>
-            <h5 class="text-white mt-3">Retro</h5>
-            <p class="text-white mt-3">Faded hues, noisy filters, and glam tints encompass the retro filters on offer. We've got all the 1980s Retro Chic filters you've been looking for..</p>
-          </div>
-          <div class="col-lg-4">
-            <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
-              <i class="ni ni-atom text-primary"></i>
-            </div>
-            <h5 class="text-white mt-3">Cyberpunk</h5>
-            <p class="text-white mt-3">Electric effects and maximum noise dominate the cyberpunk filter collection.</p>
-          </div>
-        </div>
-      </div>
-      <!-- SVG separator -->
-      <div class="separator separator-bottom separator-skew zindex-100">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-    </section>
-
-
+     
+      </section>
+  
+  
     <section class="section section-shaped">
       <div class="shape shape-style-1 shape-default">
         <span></span>
