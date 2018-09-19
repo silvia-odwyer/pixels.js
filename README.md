@@ -1,31 +1,35 @@
-# Pixels.JS: Hundreds of photo filters for your JS projects
+# Pixels.JS: 70+ Photo Filters for your Browser & Node Projects
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 ![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)
 
-Pixels.JS is an  image filtering library with over 100 photo filters for use in the browser or with Node.JS.
+Pixels.JS is an  image filtering library with over 70 photo filters for use in the browser or with Node.JS.
 
 Image filtering comprises vintage filters, solarizers, inverters, and over ninety more. You can explore these in the Flashback web app, 
 which makes use of the library.
 
 ## Importing Pixels.JS
 ### In The Browser
-Include the following script tag in your page's head tag: `<script src="unpkg.com/Pixels.JS.js"></script>`
+[CDN LINK COMING SOON]
+Include the following script tag in your page's head tag: `<script src="this/is/a/link/unpkg.com/PixelsJS.js"></script>`
 
 ### Node.JS
+[WAITING FOR APPROVAL FROM NPM]
 `npm install Pixels.JS`
 
 
 ## Using Pixels.JS
 ### Browser
 ##### HTML
+After you've included a copy of Pixels.JS in your head tag, include an image in your HTML:
 ```html
 <img src="image.PNG" id="img"/> 
 ```
 
 ##### Javascript
+Then, in your JavaScript:
 ```javascript
 // Select the image you wish to filter
 var img = document.getElementById("img")
@@ -50,7 +54,7 @@ var canvas = new Canvas(200, 200),
 get-image-data('./image.jpg', function(error, info) {
   var imgData = info.data
   
-  let newImgData = Pixels.JS.filterImgData(imgData, "solange");
+  let newImgData = PixelsJS.filterImgData(imgData, "solange");
   
   ctx.putImageData(imgData, 0, 0);
   
