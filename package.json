@@ -2,7 +2,7 @@
   "name": "y",
   "version": "1.0.0",
   "description": "An image filtering library, containing over 70 image filters, supporting Node & the browser.",
-  "main": "dist/FilterMagic.js",
+  "main": "dist/Pixels.js",
   "scripts": {
     "build:browser": "webpack",
     "build:node": "webpack",
