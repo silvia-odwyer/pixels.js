@@ -1,9 +1,11 @@
-# Pixels.JS: 70+ Photo Filters for your Browser & Node Projects
+# Pixels.JS
+## 70+ Photo Filters for your Browser & Node Projects
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 ![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)
+![GitHub last commit](https://img.shields.io/badge/filters-71-blue.svg)
 
 Pixels.JS is an  image filtering library with over 70 photo filters for use in the browser or with Node.JS.
 
@@ -13,6 +15,7 @@ which makes use of the library.
 ## Importing Pixels.JS
 ### In The Browser
 [CDN LINK COMING SOON]
+
 Include the following script tag in your page's head tag: `<script src="this/is/a/link/unpkg.com/PixelsJS.js"></script>`
 
 ### Node.JS
