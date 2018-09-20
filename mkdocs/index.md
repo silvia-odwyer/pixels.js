@@ -100,16 +100,77 @@ Pixels.JS can accommodate this by including more than thirty tinted filters in o
 ### Vintage Filters
 
 
-## Commands
+## Methods
+PixelsJS contains two key methods:
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+- filterImg 
 
-## Project layout
+- filterImgData
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## filterImg(imageObject, filterName)
+*In-Browser Only*
+
+This method takes an image object and a filter name, and it returns the filtered image as a canvas.
+The original image is replaced with the filtered image in canvas format. 
+The list of filternames can be seen in the Filters List below.
+### Parameters
+1. imageObject: This consists of a HTML Image Element. If you add an image to the webpage, and select it with getElementById or querySelector, 
+this is the object you then pass to the filterImg method.
+2. filterName: Name of the filter you'd like. If the filter is invalid, an error will be thrown.
+
+### Returns
+A canvas object. The original image is automatically replaced by the new canvas.
+
+## filterImgData(imgData) -> imgData
+Every image consists of pixels, whose pixel data can be retrieved using the getImageData method, as found in the HTML5 Canvas API. 
+
+```javascript
+    let imgData = context.getImageData(0, 0, canvas.width, canvas.height);
+```
+
+If you'd like to filter only the image data or work with the image data alone (and not the image), you can use this method instead. 
+It filters or manipulates the image data passed to it, and then returns the filtered image data object.
+You can then place this image data on a canvas or replace the current image data with this data. 
+
+```javascript
+    context.putImageData(newImgData, 0, 0)
+```
+
+## Complete Example
+### Browser
+```javascript
+    let canvas = document.querySelector("canvas");
+    let context = canvas.getContext("2d")
+
+    // Get the image data found within the canvas
+    let imgData = context.getImageData(0, 0, canvas.width, canvas.height);
+
+    // Filter the image data
+    let newImgData = PixelsJS.filterImgData(imgData, "solange");
+
+    // Replace the old image data with the new image data.
+    context.putImageData(newImgData, 0, 0);
+```
+
+### NodeJS
+```javascript
+const get-image-data = require('get-image-data');
+const Pixels.JS = require("Pixels.JS");
+const Canvas = require('canvas')
+
+var canvas = new Canvas(200, 200),
+    ctx = canvas.getContext('2d'),
+
+get-image-data('./image.jpg', function(error, info) {
+  var imgData = info.data
+  
+  let newImgData = PixelsJS.filterImgData(imgData, "solange");
+  
+  ctx.putImageData(imgData, 0, 0);
+  
+})
+```
+
+## All Filters
+A complete Demo of all filters, along with their names, can be found in PixelsJS' official website. 
+Just navigate to the Demo section of the website, and you'll get a live demo of each filter. 
