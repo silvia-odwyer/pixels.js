@@ -8,7 +8,7 @@
   <meta name="author" content="Creative Tim">
   <title>Pixels.js: 100 Photo Filters for your projects</title>
   <!-- Favicon -->
-  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="favicon.ico" rel="icon">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Hind+Vadodara&effect=anaglyph" rel="stylesheet">
   <!-- Icons -->
@@ -22,7 +22,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script src="assets/js/filtering.js"></script>
-  <script src="../dist/Pixels.js"></script>
+  <script src="dist/Pixels.js"></script>
 
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -273,25 +273,21 @@
               </h2>
 
               <article class="imgs">
-                <img src="assets/img/skyscrapers.PNG"/>
-                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
-                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
-                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
-                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
-                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
-                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
-                <img src="assets/img/skyscrapers.PNG" class="filtered_skyscrapers" />
-
+                <img src="assets/img/daisy.PNG"/>
+                <img src="assets/img/daisy.PNG" class="daisy" />
+                <img src="assets/img/daisy.PNG" class="daisy" />
+                <img src="assets/img/daisy.PNG" class="daisy" />
                 
-                <img src="assets/img/citynight.PNG" class="city" />
-                <img src="assets/img/citynight.PNG" class="city" />
-                <img src="assets/img/citynight.PNG" class="city" />
-                <img src="assets/img/citynight.PNG" class="city" />
+                <img src="assets/img/city2.jpg" class="city" />
+                <img src="assets/img/city2.jpg" class="city" />
+                <img src="assets/img/city2.jpg" class="city" />
+                <img src="assets/img/city2.jpg" class="city" />
 
-                <img src="assets/img/night.PNG" class="night" />
-                <img src="assets/img/night.PNG" class="night" />
-                <img src="assets/img/night.PNG" class="night" />
-                <img src="assets/img/night.PNG" class="night" />
+
+                <img src="assets/img/fuji.jpg" class="fuji" />
+                <img src="assets/img/fuji.jpg" class="fuji" />
+                <img src="assets/img/fuji.jpg" class="fuji" />
+                <img src="assets/img/fuji.jpg" class="fuji" />
 
 
 
@@ -388,10 +384,13 @@
             </section>
 
             <h2 class="mb-5">
-              <span>Demo</span>
+              <span id="demo">Demo</span>
             </h2>
 
-            <p>To try out all of the available filters, just click here.</p>
+            <p>All of the available photo filters are shown and demonstrated below. If you'd like to use a filter in your own projects, 
+              just include the name of the filter in the sample code shown above.
+              The Original is the first image.
+            </p>
 
 
           </div>
@@ -556,22 +555,6 @@
             </article>
             <article class="tile">
             </article>
-            <article class="tile">
-            </article>
-            <article class="tile">
-            </article>
-            <article class="tile">
-            </article>
-            <article class="tile">
-            </article>
-            <article class="tile">
-            </article>
-            <article class="tile">
-            </article>
-            <article class="tile">
-            </article>
-            <article class="tile">
-            </article>
           </section>
         </div>
       </div>
@@ -584,16 +567,6 @@
           <div class="row text-center justify-content-center">
             <div class="col-lg-10">
               <h2 class="display-3 text-white">Filters Available</h2>
-              
-              <article class="demo_imgs">
-                  <img src="assets/img/city2.PNG" class="citynight" />
-                  <img src="assets/img/city2.PNG" class="citynight" />
-                  <img src="assets/img/city2.PNG" class="citynight" />
-                  <img src="assets/img/city2.PNG" class="citynight" />
-                  <img src="assets/img/city2.PNG" class="citynight" />
-                  <img src="assets/img/city2.PNG" class="citynight" />
-
-              </article>
 
               <p class="lead text-white">From electric, cyberpunk filters to pastel tinted filters and everything in
                 between, Pixels.js has a filter to show your image's unique flair.</p>
@@ -764,7 +737,7 @@
             data-toggle="tooltip" data-original-title="Contact Silvia">
             <i class="fa fa-facebook-square"></i>
           </a>
-          <a target="_blank" href="https://github.com/silvia-odwyer/FilterMagic" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg"
+          <a target="_blank" href="https://github.com/silvia-odwyer/pixels.js" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg"
             data-toggle="tooltip" data-original-title="Star on Github">
             <i class="fa fa-github"></i>
           </a>
