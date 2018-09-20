@@ -37,15 +37,30 @@
     }
 
     function filterDemoImages() {
-        var night_imgs = document.querySelectorAll(".citynight");
-
-        var filters_skyscrapers = ["twenties", "ocean", "perfume", "warmth", "solange", "extreme_offset_red"]
-        for (let i = 0; i < filters_skyscrapers.length; i += 1) {
-            let img = night_imgs[i];
+        let daisy_imgs = document.querySelectorAll(".daisy");
+        
+        // 245 x 158
+        let filters = ["twenties", "ocean", "perfume", "warmth", "solange", "extreme_offset_red"]
+        for (let i = 0; i < daisy_imgs.length; i += 1) {
+            let img = daisy_imgs[i];
             console.log("currently on", img);
-            pixelsJS.filterImg(img, filters_skyscrapers[i]);
+            pixelsJS.filterImg(img, filters[i]);
         };        
 
+        let city_imgs = document.querySelectorAll(".city")
+        let city_filters = ["ocean", "offset", "twenties", "warmth", "solange", "extreme_offset_red"]
+        for (let i = 0; i < city_imgs.length; i += 1) {
+            let img = city_imgs[i];
+            pixelsJS.filterImg(img, city_filters[i]);
+        };      
+
+        let fuji_imgs = document.querySelectorAll(".fuji");
+        console.log(fuji_imgs)
+        let fuji_filters = ["ocean", "perfume", "serenity", "twenties",  "offset", "warmth",  "extreme_offset_red"]
+        for (let i = 0; i < fuji_imgs.length; i += 1) {
+            let img = fuji_imgs[i];
+            pixelsJS.filterImg(img, fuji_filters[i]);
+        };    
 
     }
 
