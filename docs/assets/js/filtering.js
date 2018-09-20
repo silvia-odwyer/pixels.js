@@ -4,7 +4,7 @@
     var tiles;
     var img;
     var canvas_list = [];
-    var current_img_url = "city1.PNG"
+    var current_img_url = "./city1.PNG"
     var current_canvas;
     var imgData;
     var original_img_data;
