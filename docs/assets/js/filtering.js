@@ -20,7 +20,8 @@
         console.log(tiles);
         // document.getElementById('img_uploader').addEventListener('change', readURL, true);
         appendCanvases();
-        filterDemoImages();
+        window.setTimeout(filterDemoImages, 500)
+        
         // Init default image
         img = document.createElement("img");
 
