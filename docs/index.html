@@ -62,38 +62,35 @@
             <li class="nav-item dropdown">
               <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
                 <i class="ni ni-ui-04 d-lg-none"></i>
-                <span class="nav-link-inner--text">Components</span>
+                <span class="nav-link-inner--text">Quick Links</span>
               </a>
               <div class="dropdown-menu dropdown-menu-xl">
                 <div class="dropdown-menu-inner">
-                  <a href="https://demos.creative-tim.com/argon-design-system/docs/getting-started/overview.html" class="media d-flex align-items-center">
+                  <a href="https://silvia-odwyer.github.io/pixels.js/#docs" class="media d-flex align-items-center">
                     <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
                       <i class="ni ni-spaceship"></i>
                     </div>
                     <div class="media-body ml-3">
-                      <h6 class="heading text-primary mb-md-1">Getting started</h6>
-                      <p class="description d-none d-md-inline-block mb-0">Learn how to use Argon compiling Scss,
-                        change brand colors and more.</p>
+                      <h6 class="heading text-primary mb-md-1">Documentation</h6>
+                      <p class="description d-none d-md-inline-block mb-0">Read the official PixelsJS documentation.</p>
                     </div>
                   </a>
-                  <a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html" class="media d-flex align-items-center">
+                  <a href="https://silvia-odwyer.github.io/pixels.js/#demo" class="media d-flex align-items-center">
                     <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
                       <i class="ni ni-palette"></i>
                     </div>
                     <div class="media-body ml-3">
-                      <h6 class="heading text-primary mb-md-1">Foundation</h6>
-                      <p class="description d-none d-md-inline-block mb-0">Learn more about colors, typography, icons
-                        and the grid system we used for Argon.</p>
+                      <h6 class="heading text-primary mb-md-1">Demo & All Image Filters</h6>
+                      <p class="description d-none d-md-inline-block mb-0">View PixelsJS in action, along with all of its image filters.</p>
                     </div>
                   </a>
-                  <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="media d-flex align-items-center">
+                  <a href="https://silvia-odwyer.github.io/pixels.js#usage" class="media d-flex align-items-center">
                     <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
                       <i class="ni ni-ui-04"></i>
                     </div>
                     <div class="media-body ml-3">
-                      <h5 class="heading text-warning mb-md-1">Components</h5>
-                      <p class="description d-none d-md-inline-block mb-0">Browse our 50 beautiful handcrafted
-                        components offered in the Free version.</p>
+                      <h5 class="heading text-warning mb-md-1">Usage</h5>
+                      <p class="description d-none d-md-inline-block mb-0">Get started quickly with sample code for both the browser & Node.</p>
                     </div>
                   </a>
                 </div>
@@ -102,13 +99,12 @@
             <li class="nav-item dropdown">
               <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
                 <i class="ni ni-collection d-lg-none"></i>
-                <span class="nav-link-inner--text">Examples</span>
+                <span class="nav-link-inner--text">Download</span>
               </a>
               <div class="dropdown-menu">
-                <a href="./examples/landing.html" class="dropdown-item">Landing</a>
-                <a href="./examples/profile.html" class="dropdown-item">Profile</a>
-                <a href="./examples/login.html" class="dropdown-item">Login</a>
-                <a href="./examples/register.html" class="dropdown-item">Register</a>
+                <a href="index.html#installation" class="dropdown-item">Get a copy for the browser on the Unpkg CDN</a>
+                <a href="index.html#installation" class="dropdown-item">Install on NPM</a>
+                <a href="https://github.com/silvia-odwyer/pixels.js" class="dropdown-item">View on GitHub</a>
               </div>
             </li>
           </ul>
@@ -135,7 +131,7 @@
               </a>
             </li>
             <li class="nav-item d-none d-lg-block ml-lg-4">
-              <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" class="btn btn-neutral btn-icon">
+              <a href="index.html#installation" target="_blank" class="btn btn-neutral btn-icon">
                 <span class="btn-inner--icon">
                   <i class="fa fa-cloud-download mr-2"></i>
                 </span>
@@ -206,7 +202,7 @@
             <!-- Basic elements -->
 
             <h2 class="mb-5">
-              <span>Installation</span>
+              <span id="installation">Installation</span>
             </h2>
 
             <div class="container">
@@ -234,8 +230,7 @@
                             <i class="ni ni-app"></i>
                           </div>
                           <h6 class="text-success text-uppercase">NPM</h6>
-                          <p class="description mt-3">To install via NPM:</p>
-                          <p class="description mt-3">npm install pixelsjs</p>
+                          <p class="description mt-3">To install via NPM (coming soon): `npm install pixelsjs`</p>
 
                           <a href="#" class="btn btn-success mt-4">COMING SOON</a>
                         </div>
@@ -261,7 +256,7 @@
             </div>
 
             <section>
-              <h2 class="mb-5">
+              <h2 class="mb-5 space-above">
                 <span>Pixels.JS In Action</span>
               </h2>
 
@@ -287,8 +282,8 @@
               </article>
 
               <article>
-                <h2 class="space-above"">
-                  <span id="demo">Official PixelsJS Documentation</span>
+                <h2 class="space-above">
+                  <span id="docs">Official PixelsJS Documentation</span>
                 </h2>
 
                 <p> For complete PixelsJS documentation, we have hosted our documentation on Read The Docs.
@@ -298,7 +293,7 @@
                 </p>
               </article>
 
-              <h2 class="space-above">Usage</h2>
+              <h2 class="space-above" id="usage">Usage</h2>
               <p>Pixels.js is compatible with both the browser and Node.JS, however usage varies depending on which
                 you're using.
                 Make sure to read the notes provided with each, and if you have any issues, you can contact me on
@@ -626,8 +621,8 @@
               genres, from retro filters,
               to futuristic, cyberpunk effects. With only two lines of code, you can add any photo filter to your
               image.</p>
-            <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="btn btn-white mt-4">See
-              all components</a>
+            <a href="index.html#demo" class="btn btn-white mt-4">See
+              all filters</a>
           </div>
           <div class="col-lg-6 mb-lg-auto">
             <div class="rounded shadow-lg overflow-hidden transform-perspective-right">
@@ -689,36 +684,24 @@
               <h4 class="display-4 mb-5 mt-5">Compatible with these technologies</h4>
               <div class="row justify-content-center">
                 <div class="col-lg-2 col-4">
-                  <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" data-toggle="tooltip"
-                    data-original-title="Bootstrap 4 - Most popular front-end component library">
                     <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg"
                       class="img-fluid">
-                  </a>
                 </div>
                 <div class="col-lg-2 col-4">
-                  <a href=" https://www.creative-tim.com/product/vue-argon-design-system" target="_blank" data-toggle="tooltip"
-                    data-original-title="Vue.js - The progressive javascript framework">
                     <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
                       class="img-fluid">
-                  </a>
                 </div>
                 <div class="col-lg-2 col-4">
-                  <a href=" https://www.sketchapp.com/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Sketch - Digital design toolkit">
                     <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
                       class="img-fluid">
-                  </a>
                 </div>
                 <div class="col-lg-2 col-4">
-                  <a href=" https://angularjs.org/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] Angular - One framework. Mobile &amp; desktop">
                     <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
                       class="img-fluid">
-                  </a>
                 </div>
                 <div class="col-lg-2 col-4">
-                  <a href=" https://angularjs.org/" target="_blank" data-toggle="tooltip" data-original-title="[Coming Soon] React - A JavaScript library for building user interfaces">
                     <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
                       class="img-fluid">
-                  </a>
                 </div>
               </div>
             </div>
@@ -737,7 +720,7 @@
           <h4 class="mb-0 font-weight-light">Get in touch on any of these platforms.</h4>
         </div>
         <div class="col-lg-6 text-lg-center btn-wrapper">
-          <!-- <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg"
+          <!-- <a target="_blank" href="" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg"
             data-toggle="tooltip" data-original-title="Follow us">
             <i class="fa fa-twitter"></i>
           </a> -->
@@ -763,17 +746,17 @@
         <div class="col-md-6">
           <ul class="nav nav-footer justify-content-end">
             <li class="nav-item">
-              <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+              <a href="https://github.com/silvia-odwyer/pixels.js/tree/master/examples" class="nav-link" target="_blank">Examples</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+              <a href="index.html#docs" class="nav-link" target="_blank">Docs</a>
             </li>
             <li class="nav-item">
-              <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+              <a href="index.html#demo" class="nav-link" target="_blank">Demo</a>
             </li>
             <li class="nav-item">
-              <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md" class="nav-link"
-                target="_blank">MIT License</a>
+              <a href="https://github.com/silvia-odwyer/pixels.js/blob/master/LICENSE.md" class="nav-link"
+                target="_blank">License</a>
             </li>
           </ul>
         </div>
