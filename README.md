@@ -94,9 +94,10 @@ You can then place this new image data onto your canvas.
 
 !["Usage code for Node.JS"](https://github.com/silvia-odwyer/Pixels.JS/blob/master/node_code.png "Usage code for NodeJS")
 
-### Contributing
+## Contributing
 Want to contribute? I'm always delighted to work with other developers, so submit a Pull Request if you'd like to add any cool image filters. 
 :eyes: 
 
-### License
-
+## Future Plans
+- This library currently contains 70 image filters, but I'd like to bring this to 100 in the next few weeks or so. 
+- Publish on NPM and the UNPKG CDN.
