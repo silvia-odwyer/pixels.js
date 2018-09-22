@@ -18,7 +18,7 @@ which makes use of the library.
 The official home of PixelsJS is now here! https://silvia-odwyer.github.io/pixels.js/
 
 ## Read The Docs
-For complete PixelsJS documentation, we've hosted our documentation on Read The Docs. It is currently being published, but for now, you can build our docs by installing MKDocs, navigating to our mkdocs directory within this repo, and then building the documentation with `mkdocs serve`. 
+For complete PixelsJS documentation: https://pixelsjs.readthedocs.io/en/latest/
 
 ## Importing Pixels.JS
 ### In The Browser
