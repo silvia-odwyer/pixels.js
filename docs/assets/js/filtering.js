@@ -39,7 +39,7 @@
     function filterDemoImages() {
         let daisy_imgs = document.querySelectorAll(".daisy");
         
-        // 245 x 158
+        // 245 x 158 (size of images)
         let filters = ["twenties", "ocean", "perfume", "warmth", "solange", "extreme_offset_red"]
         for (let i = 0; i < daisy_imgs.length; i += 1) {
             let img = daisy_imgs[i];
@@ -56,7 +56,7 @@
 
         let fuji_imgs = document.querySelectorAll(".fuji");
         console.log(fuji_imgs)
-        let fuji_filters = ["ocean", "perfume", "serenity", "twenties",  "offset", "warmth",  "extreme_offset_red"]
+        let fuji_filters = ["ocean", "perfume", "wood", "crimson",  "offset", "warmth",  "extreme_offset_red"]
         for (let i = 0; i < fuji_imgs.length; i += 1) {
             let img = fuji_imgs[i];
             pixelsJS.filterImg(img, fuji_filters[i]);
