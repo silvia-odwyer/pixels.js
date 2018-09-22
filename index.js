@@ -39,8 +39,13 @@ function pixelsJS() {
 const imgToCanvas = (img) => {
     console.log("IMAGE IS", img);
     var canvas = document.createElement("canvas");
-    canvas.height = img.height;
-    canvas.width = img.width;
+
+    let imgWidth = img.width || img.naturalWidth;
+    let imgHeight = img.height || img.naturalHeight;
+    
+    canvas.height = imgHeight;
+    canvas.width = imgWidth;
+    
     var context = canvas.getContext("2d");
     var ptrn = context.createPattern(img, 'no-repeat');
     context.fillStyle = ptrn;
