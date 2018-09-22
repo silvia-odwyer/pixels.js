@@ -11,13 +11,11 @@ then just check for our Category specific pages, which list each of the filters.
 
 ## Importing Pixels.JS
 ### In-Browser
-[CDN LINK COMING SOON]
-
 Include the following script tag in your page's head tag: 
 
 ```html
-<script src="this/is/a/link/unpkg.com/PixelsJS.js"></script>
-```
+<script src="https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js"></script>
+``` 
 
 ### Node.JS
 Library not yet deployed as a package to NPM.
