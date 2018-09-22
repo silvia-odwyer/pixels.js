@@ -3,7 +3,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
-![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)
+[![Documentation Status](https://readthedocs.org/projects/pixelsjs/badge/?version=latest)](https://pixelsjs.readthedocs.io/en/latest/?badge=latest)
 ![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)
 ![GitHub last commit](https://img.shields.io/badge/filters-71-blue.svg)
 
@@ -17,12 +17,12 @@ which makes use of the library.
 ## Check Out The Official Website
 The official home of PixelsJS is now here! https://silvia-odwyer.github.io/pixels.js/
 
-## Read The Docs
+## Read The Docs [![Documentation Status](https://readthedocs.org/projects/pixelsjs/badge/?version=latest)](https://pixelsjs.readthedocs.io/en/latest/?badge=latest)
 For complete PixelsJS documentation: https://pixelsjs.readthedocs.io/en/latest/
 
 ## Importing Pixels.JS
 ### In The Browser
-Include the following script tag in your page's head tag: 
+Include the following script tag in your webpage's head tag: 
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js"></script>
