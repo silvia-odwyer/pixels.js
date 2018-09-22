@@ -15,7 +15,7 @@ Image filtering comprises vintage filters, solarizers, inverters, and over ninet
 which makes use of the library.
 
 ## Check Out The Official Website
-The official home of PixelsJS is now here! https://github.com/silvia-odwyer/pixels.js
+The official home of PixelsJS is now here! https://silvia-odwyer.github.io/pixels.js/
 
 ## Read The Docs
 For complete PixelsJS documentation, we've hosted our documentation on Read The Docs. It is currently being published, but for now, you can build our docs by installing MKDocs, navigating to our mkdocs directory within this repo, and then building the documentation with `mkdocs serve`. 
@@ -93,3 +93,10 @@ You can then place this new image data onto your canvas.
 
 
 !["Usage code for Node.JS"](https://github.com/silvia-odwyer/Pixels.JS/blob/master/node_code.png "Usage code for NodeJS")
+
+### Contributing
+Want to contribute? I'm always delighted to work with other developers, so submit a Pull Request if you'd like to add any cool image filters. 
+:eyes: 
+
+### License
+
