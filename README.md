@@ -14,6 +14,12 @@ Pixels.JS is an  image filtering library with over 70 photo filters for use in t
 Image filtering comprises vintage filters, solarizers, inverters, and over ninety more. You can explore these in the Flashback web app, 
 which makes use of the library.
 
+## Check Out The Official Website
+The official home of PixelsJS is now here! https://github.com/silvia-odwyer/pixels.js
+
+## Read The Docs
+For complete PixelsJS documentation, we've hosted our documentation on Read The Docs. It is currently being published, but for now, you can build our docs by installing MKDocs, navigating to our mkdocs directory within this repo, and then building the documentation with `mkdocs serve`. 
+
 ## Importing Pixels.JS
 ### In The Browser
 [CDN LINK COMING SOON]
@@ -21,7 +27,7 @@ which makes use of the library.
 Include the following script tag in your page's head tag: `<script src="this/is/a/link/unpkg.com/PixelsJS.js"></script>`
 
 ### Node.JS
-[WAITING FOR APPROVAL FROM NPM]
+[NOT YET ON NPM; COMING SOON]
 `npm install Pixels.JS`
 
 
