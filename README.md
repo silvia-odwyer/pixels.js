@@ -22,14 +22,15 @@ For complete PixelsJS documentation, we've hosted our documentation on Read The 
 
 ## Importing Pixels.JS
 ### In The Browser
-Clone this repo, navigate to the `dist` directory, and get a copy of the Pixels.js script file. Then, include that in your website, and
-use as shown below.
-<!-- Include the following script tag in your page's head tag: `<script src="this/is/a/link/unpkg.com/PixelsJS.js"></script>` -->
+Include the following script tag in your page's head tag: 
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js"></script>
+``` 
 
 ### Node.JS
 [NOT YET ON NPM; COMING SOON]
 `npm install Pixels.JS`
-
 
 ## Using Pixels.JS
 ### Browser
