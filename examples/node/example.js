@@ -1,5 +1,5 @@
 
-var filterMagic = require('./filterMagic.js');
+var filterMagic = require('Pixels.js');
 
 const pureimage = require("pureimage");
 var out = function() {
@@ -8,10 +8,12 @@ var out = function() {
     ctx.fillStyle = 'rgba(255,0,0, 0.5)';
 
     var imgData = ctx.getImageData(0, 0, img1.height, img1.width);
-    imgData = filterMagic.filterImg(imgData, "solange");
+    imgData = pixelsJS.filterImgData(imgData, "solange");
     // imgData can now be placed on the canvas.
 
-    console.log(imgData)
+    console.log("New img data:", imgData)
+
+    ctx.putImageData(newImgData, 0, 0)
 
 };
 out();

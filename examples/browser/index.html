@@ -6,16 +6,19 @@
     <body>
         <img src="hi.PNG" id="img"/>
         <img src="woman.PNG" id="img2"/>
+        <img src="city.PNG" id="img3"/>
 
         <div id='root'>
         </div>
-        <script type='text/javascript' src='./filterMagic.js'></script>
+        <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js'></script>
         <script type='text/javascript'>            
             var img = document.getElementById("img");
             var img2 = document.getElementById("img2");
+            var img3 = document.getElementById("img3");
             
-            var canvas = filterMagic.filterImg(img, "serenity");
-            var can2 = filterMagic.filterImg(img2, "cosmic")
+            var canvas = pixelsJS.filterImg(img, "serenity");
+            var can2 = pixelsJS.filterImg(img2, "cosmic");
+            var can3 = pixelsJS.filterImg(img3, "perfume")
             document.body.append(canvas)
             document.body.append(can2);
         </script>
