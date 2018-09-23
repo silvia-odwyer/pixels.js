@@ -10,18 +10,18 @@
 
   <!-- Favicon -->
   <link href="favicon.ico" rel="icon">
-  
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Hind+Vadodara&effect=anaglyph" rel="stylesheet">
-  
+
   <!-- Icons -->
   <link href="./assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
   <link href="./assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  
+
   <!-- Argon CSS -->
   <link type="text/css" href="./assets/css/argon.css?v=1.0.1" rel="stylesheet">
 
-  <!-- PixelsJS  -->  
+  <!-- PixelsJS  -->
   <script src="./dist/Pixels.js"></script>
 
   <!-- Code highlighting -->
@@ -70,7 +70,7 @@
               </a>
               <div class="dropdown-menu dropdown-menu-xl">
                 <div class="dropdown-menu-inner">
-                  <a href="https://silvia-odwyer.github.io/pixels.js/#docs" class="media d-flex align-items-center">
+                  <a href="https://pixelsjs.readthedocs.io/en/latest/ " class="media d-flex align-items-center">
                     <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
                       <i class="ni ni-spaceship"></i>
                     </div>
@@ -85,7 +85,8 @@
                     </div>
                     <div class="media-body ml-3">
                       <h6 class="heading text-primary mb-md-1">Demo & All Image Filters</h6>
-                      <p class="description d-none d-md-inline-block mb-0">View PixelsJS in action, along with all of its image filters.</p>
+                      <p class="description d-none d-md-inline-block mb-0">View PixelsJS in action, along with all of
+                        its image filters.</p>
                     </div>
                   </a>
                   <a href="https://silvia-odwyer.github.io/pixels.js#usage" class="media d-flex align-items-center">
@@ -94,7 +95,8 @@
                     </div>
                     <div class="media-body ml-3">
                       <h5 class="heading text-warning mb-md-1">Usage</h5>
-                      <p class="description d-none d-md-inline-block mb-0">Get started quickly with sample code for both the browser & Node.</p>
+                      <p class="description d-none d-md-inline-block mb-0">Get started quickly with sample code for
+                        both the browser & Node.</p>
                     </div>
                   </a>
                 </div>
@@ -176,7 +178,7 @@
                 <div class="btn-wrapper mt-5">
                   <a href="index.html#installation" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
                     <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
-                    <span class="btn-inner--text">Download HTML</span>
+                    <span class="btn-inner--text">Download</span>
                   </a>
                   <a href="https://github.com/silvia-odwyer/pixels.js" class="btn btn-lg btn-github btn-icon mb-3 mb-sm-0"
                     target="_blank">
@@ -220,9 +222,11 @@
                             <i class="ni ni-world"></i>
                           </div>
                           <h6 class="text-primary text-uppercase">Browser</h6>
-                          <p class="description mt-3">Include the following as a script in your website: https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js</p>
+                          <p class="description mt-3">Include the following as a script in your website:
+                            https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js</p>
 
-                          <a href="https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js" class="btn btn-primary mt-4">via jsDelivr</a>
+                          <a href="https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js" class="btn btn-primary mt-4">via
+                            jsDelivr</a>
                         </div>
                       </div>
                     </div>
@@ -310,9 +314,11 @@
               <pre><code class="language-js">
                   // Select the image you wish to filter
                   var img = document.getElementById("img")
-                  
+
                   // First parameter is the image object, and the second is the filter you wish to apply.
-                  pixelsJS.filterImg(img, "twenties");               </code></pre>
+                  img.onload = function() {
+                    pixelsJS.filterImg(img, "twenties");      
+}               </code></pre>
               <!-- Image Representation -->
               <!-- <img src="assets/img/carbon1.PNG" /> -->
 
@@ -684,24 +690,24 @@
               <h4 class="display-4 mb-5 mt-5">Compatible with these technologies</h4>
               <div class="row justify-content-center">
                 <div class="col-lg-2 col-4">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg"
-                      class="img-fluid">
+                  <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg"
+                    class="img-fluid">
                 </div>
                 <div class="col-lg-2 col-4">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
-                      class="img-fluid">
+                  <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
+                    class="img-fluid">
                 </div>
                 <div class="col-lg-2 col-4">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
-                      class="img-fluid">
+                  <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
+                    class="img-fluid">
                 </div>
                 <div class="col-lg-2 col-4">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
-                      class="img-fluid">
+                  <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
+                    class="img-fluid">
                 </div>
                 <div class="col-lg-2 col-4">
-                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
-                      class="img-fluid">
+                  <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
+                    class="img-fluid">
                 </div>
               </div>
             </div>
@@ -755,8 +761,7 @@
               <a href="index.html#demo" class="nav-link" target="_blank">Demo</a>
             </li>
             <li class="nav-item">
-              <a href="https://github.com/silvia-odwyer/pixels.js/blob/master/LICENSE.md" class="nav-link"
-                target="_blank">License</a>
+              <a href="https://github.com/silvia-odwyer/pixels.js/blob/master/LICENSE.md" class="nav-link" target="_blank">License</a>
             </li>
           </ul>
         </div>

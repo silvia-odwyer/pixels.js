@@ -34,8 +34,11 @@ Then, in your JavaScript:
 ```javascript
 // Select the image you wish to filter
 var img = document.getElementById("img")
+
 // First parameter is the image object, and the second is the filter you wish to apply.
-pixelsJS.filterImg(img, "twenties");      
+img.onload = function() {
+  pixelsJS.filterImg(img, "twenties");      
+}
 ```
 
 #### Node.JS
