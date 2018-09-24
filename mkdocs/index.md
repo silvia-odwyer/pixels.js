@@ -102,11 +102,13 @@ Pixels.JS can accommodate this by including more than thirty tinted filters in o
 
 
 ## Methods
-PixelsJS contains two key methods:
+PixelsJS contains three key methods:
 
 - filterImg 
 
 - filterImgData
+
+- getFilterList
 
 ## filterImg(imageObject, filterName)
 *In-Browser Only*
@@ -136,6 +138,11 @@ You can then place this image data on a canvas or replace the current image data
 ```javascript
     context.putImageData(newImgData, 0, 0)
 ```
+
+## getFilterList() -> array
+To get a list of all filters available in PixelJS, just call getFilterList.
+
+An array of all filters will be returned.
 
 ## Complete Example
 ### Browser
