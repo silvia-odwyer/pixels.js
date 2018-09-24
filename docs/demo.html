@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="70+ Photo Filters for your websites & NodeJS projects.">
+    <meta name="author" content="Silvia O'Dwyer">
+    <title>Pixels.js Tool: 70+ photo filters for your websites & NodeJS Projects</title>
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Hind+Vadodara&effect=anaglyph" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="./assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+    <link href="./assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Argon CSS -->
+    <link type="text/css" href="./assets/css/argon.css?v=1.0.1" rel="stylesheet">
+
+    <!-- PixelsJS  -->
+    <script src="./dist/Pixels.js"></script>
+    <script src="assets/js/pixelsjs_demo_tool.js"></script>
+
+    <!-- Code highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism-okaidia.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+    <header class="header-global">
+        <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5" href="./index.html">
+                    <div class="icon icon-shape mb-8">
+                        <i class="ni ni-ungroup"></i>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+                    aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbar_global">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand">
+                                <a href="./index.html">
+                                    <img src="./assets/img/brand/blue.png">
+                                </a>
+                            </div>
+                            <div class="col-6 collapse-close">
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global"
+                                    aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                                <i class="ni ni-ui-04 d-lg-none"></i>
+                                <span class="nav-link-inner--text">Quick Links</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-xl">
+                                <div class="dropdown-menu-inner">
+                                    <a href="https://pixelsjs.readthedocs.io/en/latest/ " class="media d-flex align-items-center">
+                                        <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                                            <i class="ni ni-spaceship"></i>
+                                        </div>
+                                        <div class="media-body ml-3">
+                                            <h6 class="heading text-primary mb-md-1">Documentation</h6>
+                                            <p class="description d-none d-md-inline-block mb-0">Read the official
+                                                PixelsJS documentation.</p>
+                                        </div>
+                                    </a>
+                                    <a href="https://silvia-odwyer.github.io/pixels.js/#demo" class="media d-flex align-items-center">
+                                        <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                                            <i class="ni ni-palette"></i>
+                                        </div>
+                                        <div class="media-body ml-3">
+                                            <h6 class="heading text-primary mb-md-1">Demo & All Image Filters</h6>
+                                            <p class="description d-none d-md-inline-block mb-0">View PixelsJS in
+                                                action, along with all of
+                                                its image filters.</p>
+                                        </div>
+                                    </a>
+                                    <a href="https://silvia-odwyer.github.io/pixels.js#usage" class="media d-flex align-items-center">
+                                        <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                                            <i class="ni ni-ui-04"></i>
+                                        </div>
+                                        <div class="media-body ml-3">
+                                            <h5 class="heading text-warning mb-md-1">Usage</h5>
+                                            <p class="description d-none d-md-inline-block mb-0">Get started quickly
+                                                with sample code for
+                                                both the browser & Node.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                                <i class="ni ni-collection d-lg-none"></i>
+                                <span class="nav-link-inner--text">Download</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="index.html#installation" class="dropdown-item">Get a copy for the browser on
+                                    the Unpkg CDN</a>
+                                <a href="index.html#installation" class="dropdown-item">Install on NPM</a>
+                                <a href="https://github.com/silvia-odwyer/pixels.js" class="dropdown-item">View on
+                                    GitHub</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-icon" href="https://www.facebook.com/silvia.odwyer.7" target="_blank"
+                                data-toggle="tooltip" title="Contact Silvia on Facebook">
+                                <i class="fa fa-facebook-square"></i>
+                                <span class="nav-link-inner--text d-lg-none">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-icon" href="https://www.reddit.com/user/Silvia923" target="_blank"
+                                data-toggle="tooltip" title="Contact Silvia on Reddit">
+                                <i class="fa fa-reddit-square"></i>
+                                <span class="nav-link-inner--text d-lg-none">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-icon" href="https://github.com/silvia-odwyer/pixels.js" target="_blank"
+                                data-toggle="tooltip" title="Star us on Github">
+                                <i class="fa fa-github"></i>
+                                <span class="nav-link-inner--text d-lg-none">Github</span>
+                            </a>
+                        </li>
+                        <li class="nav-item d-none d-lg-block ml-lg-4">
+                            <a href="index.html#installation" target="_blank" class="btn btn-neutral btn-icon">
+                                <span class="btn-inner--icon">
+                                    <i class="fa fa-cloud-download mr-2"></i>
+                                </span>
+                                <span class="nav-link-inner--text">Download</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="position-relative">
+            <!-- Hero for FREE version -->
+            <section class="section section-lg section-hero section-shaped">
+                <!-- Background circles -->
+                <div class="shape shape-style-1 shape-primary">
+                    <span class="span-150"></span>
+                    <span class="span-50"></span>
+                    <span class="span-50"></span>
+                    <span class="span-75"></span>
+                    <span class="span-100"></span>
+                    <span class="span-75"></span>
+                    <span class="span-50"></span>
+                    <span class="span-100"></span>
+                    <span class="span-50"></span>
+                    <span class="span-100"></span>
+                </div>
+                <div class="container shape-container d-flex align-items-center py-lg graphs">
+                    <div class="col px-0">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-lg-6 text-center">
+                                <h5 class="logo"> <i class="icon icon-sm ni ni-ungroup"></i>
+                                    pixels.js</h5>
+                                <p class="lead text-white">An image filtering library, with over 100 image filters for
+                                    your websites &
+                                    Node
+                                    projects.</p>
+                                <div class="btn-wrapper mt-5">
+                                    <a href="index.html#installation" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
+                                        <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
+                                        <span class="btn-inner--text">Download</span>
+                                    </a>
+                                    <a href="https://github.com/silvia-odwyer/pixels.js" class="btn btn-lg btn-github btn-icon mb-3 mb-sm-0"
+                                        target="_blank">
+                                        <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
+                                        <span class="btn-inner--text">
+                                            <span class="text-warning">Check it out</span> on Github</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SVG separator -->
+                <div class="separator separator-bottom separator-skew zindex-100">
+                    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+                    </svg>
+                </div>
+            </section>
+        </div>
+        <section class="section section-components pb-0" id="section-components">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+
+                            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                                    <i class="ni ni-collection d-lg-none"></i>
+
+                                </a>
+                        <div class="file">
+                            <label class="file-label">
+                                <input class="file-input" type="file" id='img_uploader' name="upload-image">
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                        Choose an image...
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <h2 class="space-above">
+                            <span id="demo">Demo</span>
+                        </h2>
+
+                        <p>All of the available photo filters are shown and demonstrated below. If you'd like to use a
+                            filter in
+                            your own projects,
+                            just include the name of the filter in the sample code shown above.
+                            The Original is the first image.
+                        </p>
+
+
+                    </div>
+
+
+
+                    <section class="tiles">
+                        <canvas id="canvas" height="300" width="300"></canvas>
+
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                        <article class="tile">
+                        </article>
+                    </section>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="section section-lg bg-gradient-default">
+            <div class="container pt-lg">
+                <div class="row text-center justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="display-3 text-white">Filters Available</h2>
+
+                        <p class="lead text-white">From electric, cyberpunk filters to pastel tinted filters and
+                            everything in
+                            between, Pixels.js has a filter to show your image's unique flair.</p>
+                    </div>
+                </div>
+                <div class="row row-grid mt-5">
+                    <div class="col-lg-4">
+                        <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                            <i class="ni ni-settings text-primary"></i>
+                        </div>
+                        <h5 class="text-white mt-3">Vintage</h5>
+                        <p class="text-white mt-3">From 1920s glamour to Parisian chic, from subtle violet tints to
+                            greyscale
+                            filters, vintage filters can help bring your photo back in time. </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                            <i class="ni ni-ruler-pencil text-primary"></i>
+                        </div>
+                        <h5 class="text-white mt-3">Retro</h5>
+                        <p class="text-white mt-3">Faded hues, noisy filters, and glam tints encompass the retro
+                            filters on offer.
+                            We've got all the 1980s Retro Chic filters you've been looking for..</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
+                            <i class="ni ni-atom text-primary"></i>
+                        </div>
+                        <h5 class="text-white mt-3">Cyberpunk</h5>
+                        <p class="text-white mt-3">Electric effects and maximum noise dominate the cyberpunk filter
+                            collection.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="section section-shaped">
+            <div class="shape shape-style-1 shape-default">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="container py-md">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <h1 class="text-white font-weight-light">Over 100 Image Filters At Your Disposal</h1>
+                        <p class="lead text-white mt-4">Pixels.js comes with over 100 photo filters, spanning a variety
+                            of
+                            genres, from retro filters,
+                            to futuristic, cyberpunk effects. With only two lines of code, you can add any photo filter
+                            to your
+                            image.</p>
+                        <a href="index.html#demo" class="btn btn-white mt-4">See
+                            all filters</a>
+                    </div>
+                    <div class="col-lg-6 mb-lg-auto">
+                        <div class="rounded shadow-lg overflow-hidden transform-perspective-right">
+                            <div id="carousel_example" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel_example" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel_example" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="img-fluid" src="./assets/img/theme/img-1-1200x1000.jpg" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid" src="./assets/img/theme/img-2-1200x1000.jpg" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="img-fluid" src="./assets/img/theme/img-2-1200x1000.jpg" alt="Second slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carousel_example" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel_example" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SVG separator -->
+            <div class="separator separator-bottom separator-skew">
+                <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+        </section>
+        </section>
+
+        <section class="section section-lg">
+
+            <div class="container">
+                <img src="assets/img/demo_gif_city.gif" class="card-img">
+
+                <div class="row row-grid justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="display-3">Pixels.js is always improving
+                            <span class="text-success">and we're always adding new photo filters.</span>
+                        </h2>
+                        <p class="lead">If you'd like to contribute, we're open-source, MIT-licensed, and always ready
+                            to accept
+                            pull requests.</p>
+                        <div class="btn-wrapper">
+                            <a href="https://github.com/silvia-odwyer/pixels.js" class="btn btn-primary mb-3 mb-sm-0">View
+                                on
+                                GitHub</a>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="display-4 mb-5 mt-5">Compatible with these technologies</h4>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-2 col-4">
+                                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <div class="col-lg-2 col-4">
+                                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <div class="col-lg-2 col-4">
+                                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <div class="col-lg-2 col-4">
+                                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg"
+                                        class="img-fluid">
+                                </div>
+                                <div class="col-lg-2 col-4">
+                                    <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg"
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer has-cards">
+
+        <div class="container">
+            <div class="row row-grid align-items-center my-md">
+                <div class="col-lg-6">
+                    <h3 class="text-primary font-weight-light mb-2">Thank you for checking out Pixels.js!</h3>
+                    <h4 class="mb-0 font-weight-light">Get in touch on any of these platforms.</h4>
+                </div>
+                <div class="col-lg-6 text-lg-center btn-wrapper">
+                    <!-- <a target="_blank" href="" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg"
+            data-toggle="tooltip" data-original-title="Follow us">
+            <i class="fa fa-twitter"></i>
+          </a> -->
+                    <a target="_blank" href="https://www.facebook.com/silvia.odwyer.7" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg"
+                        data-toggle="tooltip" data-original-title="Contact Silvia">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/silvia-odwyer/pixels.js" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg"
+                        data-toggle="tooltip" data-original-title="Star on Github">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="row align-items-center justify-content-md-between">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        &copy; 2018
+                        <a href="https://www.github.com/silvia-odwyer" target="_blank">Silvia O'Dwyer. </a>
+                        <p>Website design built with the Argon Design System.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav nav-footer justify-content-end">
+                        <li class="nav-item">
+                            <a href="https://github.com/silvia-odwyer/pixels.js/tree/master/examples" class="nav-link"
+                                target="_blank">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#docs" class="nav-link" target="_blank">Docs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#demo" class="nav-link" target="_blank">Demo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://github.com/silvia-odwyer/pixels.js/blob/master/LICENSE.md" class="nav-link"
+                                target="_blank">License</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Core -->
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/vendor/headroom/headroom.min.js"></script>
+    <!-- Optional JS -->
+    <script src="./assets/vendor/onscreen/onscreen.min.js"></script>
+    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <!-- Argon JS -->
+    <script src="./assets/js/argon.js?v=1.0.1"></script>
+
+</body>
+
+</html>
