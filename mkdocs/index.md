@@ -14,7 +14,7 @@ then just check for our Category specific pages, which list each of the filters.
 Include the following script tag in your page's head tag: 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js/dist/Pixels.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/silvia-odwyer/pixels.js@0.8.1/dist/Pixels.js"></script>
 ``` 
 
 ### Node.JS
