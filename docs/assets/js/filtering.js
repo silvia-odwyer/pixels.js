@@ -20,7 +20,7 @@
         console.log(tiles);
         // document.getElementById('img_uploader').addEventListener('change', readURL, true);
         appendCanvases();
-        window.setTimeout(filterDemoImages, 500)
+        window.setTimeout(filterDemoImages, 700)
         
         // Init default image
         img = document.createElement("img");
@@ -62,7 +62,6 @@
             let img = fuji_imgs[i];
             pixelsJS.filterImg(img, fuji_filters[i]);
         };    
-
     }
 
     function appendCanvases() {
@@ -95,7 +94,7 @@
     }
 
     function assembleFilteredPhotos() {
-        var filters = ["perfume", "extra_offset_green", "extreme_offset_green", "grime", "warmth", "wood", "sunset", "crimson", "extreme_offset_red", "extreme_offset_blue", "extra_offset_red", "phase", "pink_aura", "serenity", "bluegreyscale", "retroviolet", "haze", "twenties", "greyscale", "mellow", "vintage", "evening", "bluegreyscale", "a", "offset_blue", "offset", "offset_green", "solange_grey", "invert", "lemon", "coral", "dark_purple_min_noise", "green_med_noise", "teal_min_noise", "blue_min_noise", "green_min_noise", "green_med_noise", "pink_min_noise", "red_min_noise", "min_noise", "pane", "add_horizontal_lines", "add_diagonal_lines", "add_green_diagonal_lines", "greengreyscale", "darkify", "incbrightness", "cool_twilight", "blues", "ryo", "lix", "casino", "yellow_casino", "specks", "sat_adj", "noise_centre", "greenspecks", "eclectic", "matrix", "cosmic", "solange_dark", "solange", "zapt", "neue", "eon", "aeon", "ocean", "confetti", "horizon", "rosetint", "slate", "purplescale", "redgreyscale", "radio", "specks_redscale", "frontward"]
+        let filters = pixelsJS.getFilterList();
 
         for (let j = 0; j < filters.length; j += 1) {
             let filter = filters[j]
