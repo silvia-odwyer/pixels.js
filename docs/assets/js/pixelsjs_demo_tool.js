@@ -22,13 +22,14 @@
         tiles = document.getElementsByClassName("tile");
         console.log(tiles);
         // document.getElementById('img_uploader').addEventListener('change', readURL, true);
-        window.setTimeout(filterDemoImages, 700)
         
         // Init default image
         img = document.createElement("img");
 
         img.onload = function () {
-            ctx.drawImage(img, 0, 0, 220, 277);
+            c.width = img.width;
+            c.height = img.height;
+            ctx.drawImage(img, 0, 0, img.width, img.height);
             original_img_data = ctx.getImageData(0, 0, c.width, c.height);
             console.log(original_img_data)
             if (change === 0) {
@@ -36,36 +37,8 @@
                 change += 1;
             }
             assembleFilteredPhotos();
-
         }
         img.src = current_img_url;
-    }
-
-    function filterDemoImages() {
-        let daisy_imgs = document.querySelectorAll(".daisy");
-        
-        // 245 x 158 (size of images)
-        let filters = ["twenties", "ocean", "perfume", "warmth", "solange", "extreme_offset_red"]
-        for (let i = 0; i < daisy_imgs.length; i += 1) {
-            let img = daisy_imgs[i];
-            console.log("currently on", img);
-            pixelsJS.filterImg(img, filters[i]);
-        };        
-
-        let city_imgs = document.querySelectorAll(".city")
-        let city_filters = ["ocean", "offset", "twenties", "warmth", "solange", "extreme_offset_red"]
-        for (let i = 0; i < city_imgs.length; i += 1) {
-            let img = city_imgs[i];
-            pixelsJS.filterImg(img, city_filters[i]);
-        };      
-
-        let fuji_imgs = document.querySelectorAll(".fuji");
-        console.log(fuji_imgs)
-        let fuji_filters = ["ocean", "perfume", "wood", "crimson",  "offset", "warmth",  "extreme_offset_red"]
-        for (let i = 0; i < fuji_imgs.length; i += 1) {
-            let img = fuji_imgs[i];
-            pixelsJS.filterImg(img, fuji_filters[i]);
-        };    
     }
 
     function appendCanvases() {
@@ -99,6 +72,7 @@
     }
 
     function assembleFilteredPhotos() {
+        changeCanvasSizes();
         let filters = pixelsJS.getFilterList();
 
         for (let j = 0; j < filters.length; j += 1) {
@@ -121,6 +95,16 @@
             getctx.putImageData(resImgData, 0, 0);
         }
         isFirst = 1;
+    }
+
+    function changeCanvasSizes() {
+        console.log("canvas list called")
+        for (let k = 0; k < canvas_list.length; k += 1) {
+            let canvas = canvas_list[k];
+            canvas.width = img.width;
+            canvas.height = img.height;
+        }
+        console.log("canvases", canvas_list)
     }
 
 
