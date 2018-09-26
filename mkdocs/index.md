@@ -95,11 +95,20 @@ Offset filters add a futuristic, technological, almost reminiscient of 3D filter
 ### Tinted Filters
 These filters add or subtract the amount of "red", "blue", or "green" in each pixel, thus adding a slight tint or hue to the image. Perhaps these filters
 are most common in photography apps such as Instagram and Snapchat, and are best suited towards those who would like tp
-add a warmer or cooler glow to an image. This is usually to do with the amount of red, blue, or green in each pixel.
-Pixels.JS can accommodate this by including more than thirty tinted filters in our collection.
+add a warmer or cooler glow to an image. This usually involves adding or subtracting a fixed constant from the amount of red, blue, or green in each pixel.
+Pixels.JS accommodates this by including more than thirty tinted filters in our collection.
 
 ### Vintage Filters
+These filters include greyscale, duoscale, and sepia filters. They involve getting the average of the red, blue, and green data per pixel
+and then adding or subtracting a constant to that number. 
 
+### Noise Generators 
+Noise generators add a random amount of red, green, or blue to each pixel's value or by multiplying the R, G, and B values of a pixel 
+by a random number. 
+Images are also tinted to create noise generation with a certain tint, such as purple noise generation, and so forth. 
+
+### Brightness Adjustments
+By adding a fixed constant to the R, G, and B values of each pixel, the brightness of an image can be increased, and subtraction will result in darkening an image.
 
 ## Methods
 PixelsJS contains three key methods:
@@ -124,7 +133,7 @@ this is the object you then pass to the filterImg method.
 ### Returns
 A canvas object. The original image is automatically replaced by the new canvas.
 
-## filterImgData(imgData) -> imgData
+## filterImgData(imgData, filter) -> imgData
 Every image consists of pixels, whose pixel data can be retrieved using the getImageData method, as found in the HTML5 Canvas API. 
 
 ```javascript
