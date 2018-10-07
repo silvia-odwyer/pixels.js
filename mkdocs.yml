@@ -1,2 +1,3 @@
 site_name: PixelsJS Docs
 docs_dir: "mkdocs"
+theme: readthedocs

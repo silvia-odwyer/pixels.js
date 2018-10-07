@@ -48,14 +48,14 @@ in Node, your environment and canvas libraries can differ, so we've kept usage f
 This example uses node-canvas and get-image-data, two NPM modules that make canvas rendering easier, however, you can choose whatever libraries you like; this example merely illustrates using Pixels.js in tandem with node-canvas. 
 
 ```javascript
-const get-image-data = require('get-image-data');
-const Pixels.JS = require("Pixels.JS");
+const get_image_data = require('get-image-data');
+const PixelsJS = require("pixelsjs");
 const Canvas = require('canvas')
 
 var canvas = new Canvas(200, 200),
     ctx = canvas.getContext('2d'),
 
-get-image-data('./image.jpg', function(error, info) {
+get_image_data('./image.jpg', function(error, info) {
   var imgData = info.data
   
   let newImgData = PixelsJS.filterImgData(imgData, "solange");
@@ -189,5 +189,6 @@ get-image-data('./image.jpg', function(error, info) {
 ```
 
 ## All Filters
-A complete Demo of all filters, along with their names, can be found in PixelsJS' official website. 
+A complete Demo of all filters, along with their names, can be found at [PixelsJS' official website](https://silvia-odwyer.github.io/pixels.js/)
+
 Just navigate to the Demo section of the website, and you'll get a live demo of each filter. 
