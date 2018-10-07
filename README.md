@@ -30,7 +30,12 @@ Include the following script tag in your webpage's head tag:
 
 ### Node.JS
 [NOT YET ON NPM; COMING SOON]
-`npm install Pixels.JS`
+`npm install pixelsjs`
+
+## PixelsJS In Action
+On our website, you can enter your own image and view its filtered versions as well as extra demos, but here's a quick demo:
+
+![PixelsJS can transform even this image of a city into a scene from a cyberpunk film!](https://github.com/silvia-odwyer/flashback/blob/master/media/flashback-app-city.gif "PixelsJS can transform even this image of a city into a scene from a cyberpunk film!")
 
 ## Using Pixels.JS
 ### Browser
@@ -59,14 +64,14 @@ in Node, your environment and canvas libraries can differ, so we've kept usage f
 This example uses node-canvas and get-image-data, two NPM modules that make canvas rendering easier, however, you can choose whatever libraries you like; this example merely illustrates using Pixels.js in tandem with node-canvas. 
 
 ```javascript
-const get-image-data = require('get-image-data');
-const Pixels.JS = require("Pixels.JS");
+const get_image_data = require('get-image-data');
+const PixelsJS = require("Pixels.JS");
 const Canvas = require('canvas')
 
 var canvas = new Canvas(200, 200),
     ctx = canvas.getContext('2d'),
 
-get-image-data('./image.jpg', function(error, info) {
+get_image_data('./image.jpg', function(error, info) {
   var imgData = info.data
   
   let newImgData = PixelsJS.filterImgData(imgData, "solange");
@@ -94,9 +99,6 @@ done for you.
 ### Node.JS
 Simply get the image data of the image and pass it to the filterImgData function. The output will be the new image data. 
 You can then place this new image data onto your canvas.
-
-
-!["Usage code for Node.JS"](https://github.com/silvia-odwyer/Pixels.JS/blob/master/node_code.png "Usage code for NodeJS")
 
 ## Contributing Guidelines
 Want to contribute? I'm always delighted to work with other developers, so submit a Pull Request if you'd like to add any cool image filters. 
