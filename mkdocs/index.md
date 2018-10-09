@@ -119,7 +119,7 @@ PixelsJS contains three key methods:
 
 - getFilterList
 
-## filterImg(imageObject, filterName)
+## filterImg(imageObject, filterName) -> canvas
 *In-Browser Only*
 
 This method takes an image object and a filter name, and it returns the filtered image as a canvas.
@@ -147,6 +147,13 @@ You can then place this image data on a canvas or replace the current image data
 ```javascript
     context.putImageData(newImgData, 0, 0)
 ```
+
+### Parameters
+1. imgData: This consists of an image data ndArray, as taken from the image by using the getImageData method on the image. 
+2. filterName: Name of the filter you'd like. If the filter is invalid, an error will be thrown.
+
+### Returns
+The filtered image data. 
 
 ## getFilterList() -> array
 To get a list of all filters available in PixelJS, just call getFilterList.
