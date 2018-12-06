@@ -196,6 +196,12 @@ get-image-data('./image.jpg', function(error, info) {
 ```
 
 ## All Filters
-A complete Demo of all filters, along with their names, can be found at [PixelsJS' official website](https://silvia-odwyer.github.io/pixels.js/)
+A complete Demo of all filters, along with their names, can be found at [PixelsJS' official website](https://silvia-odwyer.github.io/pixels.js/) 
+under the Demo section. 
 
-Just navigate to the Demo section of the website, and you'll get a live demo of each filter. 
+## Accompanying Web App
+An accompanying web app is also provided to test out each of the image filters. You can make use of the [web app here](https://silvia-odwyer.github.io/pixels.js/demo).
+
+## Contact
+The documentation and code is maintained by Silvia O'Dwyer ( silviaodwyerdev [at] gmail dot com). For improvements to the documentation or code, 
+you can make a Pull Request on GitHub or open an Issue. You can also contact me via the email provided above. 
