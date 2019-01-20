@@ -11,8 +11,7 @@
 
 Pixels.JS is an  image filtering library with over 70 photo filters for use in the browser or with Node.JS.
 
-Image filtering comprises vintage filters, solarizers, inverters, and over ninety more. You can explore these in the Flashback web app, 
-which makes use of the library.
+Image filtering comprises vintage filters, solarizers, inverters, and over ninety more. You can explore these in the [official web app](https://silvia-odwyer.github.io/pixels.js/demo.html), which makes use of the library and each of its comprising filters.
 
 ## Check Out The Official Website
 The official home of PixelsJS is now here! https://silvia-odwyer.github.io/pixels.js/
@@ -110,6 +109,21 @@ If it doesn't belong in any, choose one or open an Issue and I'll create a new c
 - Add your filter function, ensuring it returns filtered image data. 
 
 - Add the name of your filter and its associated method to the filter_dict variable in index.js. Make sure to import the category file where the filtering method belongs.
+
+## Featured In
+PixelsJS has been featured in some frontend web dev outlets:
+- [Best4WebDesign](https://www.best4webdesign.com/pixels-js-an-image-filtering-library/)
+- [ByPeople](https://www.bypeople.com/pixels-js-photo-filters-library-node-js/)
+
+PixelsJS has also been showcased in the weekly *Web Design Trends* newsletter:
+- [Web Design Trends.io](https://www.webdesigntrends.io/web-design-trends-5/)
+
+# Partners
+PixelsJS has also inspired some of the filters found in image processing APIs. 
+
+### Recommended APIs
+One such API is [ArcadiaJS](https://arcadia-api.xyz/), which provides an easy-to-use API for applying cool and
+intriguing effects to images, whose endpoints are clear and reliable. 
 
 ## Future Plans
 - This library currently contains 70 image filters, but I'd like to bring this to 100 in the next few weeks or so. 
