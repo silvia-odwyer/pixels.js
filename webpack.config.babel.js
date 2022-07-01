@@ -3,14 +3,14 @@ const path = require('path');
 export default () => (
     {
         mode: 'production',
-        entry: './index.js',
+        entry: './lib/index.js',
         output: {
             path: path.resolve(__dirname, './dist'),
-            filename: 'FilterMagic.js',
+            filename: 'Pixels.js',
             libraryTarget: 'umd',
             globalObject: 'this',
             // libraryExport: 'default',
-            library: 'filterMagic'
+            library: 'pixelsJS'
         },
         externals: {
             'lodash': {
