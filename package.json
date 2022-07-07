@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "pixels.js",
   "version": "1.0.0",
   "description": "An image filtering library, containing over 70 image filters, supporting Node & the browser.",
   "main": "dist/Pixels.js",
@@ -26,7 +26,7 @@
     "eslint-loader": "^1.6.1",
     "lodash": "^4.16.6",
     "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.12"
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "pureimage": "^0.1.6"
