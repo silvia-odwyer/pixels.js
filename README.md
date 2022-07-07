@@ -125,6 +125,26 @@ PixelsJS has also inspired some of the filters found in image processing APIs.
 One such API is [ArcadiaJS](https://arcadia-api.xyz/), which provides an easy-to-use API for applying cool and
 intriguing effects to images, whose endpoints are clear and reliable. 
 
+## Building the Project
+Firstly, clone this repository:
+
+```bash
+git clone https://github.com/silvia-odwyer/pixels.js
+```
+
+Next up, install the dependencies:
+
+```bash
+cd pixels.js
+npm install
+```
+
+To build the library for the browser, run:
+
+```bash
+npm run build:browser
+```
+
 ## Future Plans
 - This library currently contains 70 image filters, but I'd like to bring this to 100 in the next few weeks or so. 
 - Publish on NPM.
