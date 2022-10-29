@@ -4,7 +4,7 @@
   "description": "An image filtering library, containing over 70 image filters, supporting Node & the browser.",
   "main": "dist/Pixels.js",
   "scripts": {
-    "build:browser": "webpack",
+  "build:browser": "webpack",
     "build:node": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
